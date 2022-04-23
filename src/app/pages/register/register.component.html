@@ -1,0 +1,30 @@
+<div class="login-panel">
+  <img src="favicon.ico" class="icon">
+  <div class="title-text">
+    <h1>Register to <strong><a href="https://ag45.dots.org.ua/help" class="link-dots">{{title}}</a></strong></h1>
+  </div>
+
+  <div class="login-content">
+    <div class="username-text">
+      <p>Username</p>
+    </div>
+    <input class="text-field" #nameInput>
+    <div class="password-text">
+      <p>Password</p>
+    </div>
+    <input type="password" class="text-field" id="password" #password1Input>
+    <div class="password-text">
+      <p>Repeat Password</p>
+    </div>
+    <input type="password" class="text-field" id="repeat-password" #password2Input>
+    <button id="login-button" (click)="register(nameInput.value,password1Input.value,password2Input.value)">Register
+    </button>
+  </div>
+
+  <div class="newbie-content">
+    <div id="newbie-link">Have an account?<a href="/login" class="link">Sign in</a>!</div>
+  </div>
+  <div id="suportinfo">
+    Supported by MandM team
+  </div>
+</div>
