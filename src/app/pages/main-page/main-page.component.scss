@@ -1,54 +1,59 @@
 @import "src/main-styles";
 
 .title {
-    height: 6rem;
-    background-color: $background2;
-    border-bottom-width: 1px;
-    border-color: $border-color;
-    border-style: solid;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-start;
+  height: 6rem;
+  background-color: $background2;
+  border-bottom-width: 1px;
+  border-color: $border-color;
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
 }
 
 #title-icon {
-    margin-left: 1rem;
-    width: 4rem;
-    height: 4rem;
+  margin-left: 1rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 #title {
-    color: $white;
-    margin-left: 0.5rem;
-    min-width: 18rem;
-}
-
-.current-tab {
-    background-color: $background2;
-    border-width: 0px;
-    border-left-width: 1px;
-    border-color: $border-color;
-    border-style: solid;
-    flex: 1 1 100%;
-    height: 100%;
+  color: $white;
+  margin-left: 0.5rem;
+  min-width: 18rem;
 }
 
 #main-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+  //display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 0;
+  //background-color: $background2;
 }
 
-.main-info {
-    display: flex;
-    flex-direction: column;
+.info {
+  display: flex;
+  //margin: 0 0;
+  //margin-left: 25rem;
+  width: 100%;
+}
+
+.info-tabs {
+  display: flex;
+  //flex-direction: row;
+  justify-content: flex-start;
+  //background: white;
+  //align-items: center;
+  width: 100%;
+  height: 100%;
 }
