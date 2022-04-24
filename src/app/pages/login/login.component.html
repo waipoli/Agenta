@@ -5,20 +5,19 @@
   </div>
 
   <div class="login-content">
-    <div class="info-text">
-      <p>Username</p>
-    </div>
+    <label class="info-text">Username</label>
     <input class="text-field" #nameInput>
-    <div class="info-text">
-      <p>Password</p>
-    </div>
+    
+    <label class="info-text">Password</label>
     <input type="password" class="text-field" id="password" #pwdInput>
-    <button  id="login-button" (click)="try_sign_in(nameInput.value,pwdInput.value)">Sign in</button>
+    
+    <button class="apply-button" id="login-button" (click)="try_sign_in(nameInput.value,pwdInput.value)">Sign
+      in</button>
   </div>
 
   <div class="newbie-content">
     <div id="newbie-link">New to <b><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></b>? <a
-      href="/register" id="link-signup" class="link">Sign up</a>!
+        href="/register" id="link-signup" class="link">Sign up</a>!
     </div>
   </div>
   <div id="suportinfo">

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $white: #EEEEEE;
 $yellow: #EBC465;
@@ -9,15 +9,9 @@ $light: #f8f8f8;
 $border-color: #3F3F3F;
 $light-black: #292C31;
 
-$primary: $yellow;
-
-$link: $light;
-
-
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-
 
 html, body {
   height: 100%;
@@ -27,3 +21,4 @@ html, body {
 html {
   background: linear-gradient(to right top, $background, $background);
 }
+
