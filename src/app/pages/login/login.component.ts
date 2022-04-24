@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   constructor(private _api: APIService, private _router: Router) {
   }
 
-  isCorrectLogin: boolean = true;
 
   ngOnInit(): void {
 
@@ -33,10 +32,8 @@ export class LoginComponent implements OnInit {
       if (localStorage.getItem("isLogin") == "1") {
         localStorage.setItem("name", name);
         console.log("Log In");
-        this.isCorrectLogin = true;
         this._router.navigate(["/main-page"]);
       } else {
-        this.isCorrectLogin = false;
         localStorage.removeItem("name");
         localStorage.setItem("isLogin", "1");
         console.log("Doesnt Match");
