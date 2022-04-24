@@ -1,6 +1,18 @@
-<!--<div class="title">-->
-<!--    <img id="title-icon" src="../../../favicon.ico" alt="Agenta">-->
-<!--</div>-->
-<!--<div class="current-tab"></div>-->
-<!--<div calss="tabs"></div>-->
-<app-games></app-games>
+<div id="main-page">
+    <div class="title">
+        <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
+        <span id="title">{{title}}</span>
+        <div class="current-tab">
+            <!-- <h2>{{currentTab}}</h2> -->
+        </div>
+    </div>
+    <div class="main-info">
+        <div class="tabs">
+            <app-side-panel></app-side-panel>
+        </div>
+
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

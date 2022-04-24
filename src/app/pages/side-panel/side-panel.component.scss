@@ -1,0 +1,35 @@
+@import "src/main-styles";
+
+.tab-button {
+    flex: 1 1 100%;
+    width: 100%;
+    color: $white;
+    background-color: transparent;
+    font-weight: 400;
+    border-style: none;
+    font-size: 30px;
+    padding: 0.4rem 4rem;
+    transition: background-color 0.1s;
+    &.selected {
+        background-color: $yellow;
+        font-weight: 600;
+    }
+    cursor: pointer;
+}
+
+#side-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#about-help {
+    margin-top: 1rem;
+    border-style: solid;
+    border-color: $border-color;
+    border-width: 0px;
+    border-top-width: 1px;
+    display: flex;
+    flex-direction: column;
+}

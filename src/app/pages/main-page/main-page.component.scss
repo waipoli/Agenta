@@ -1,9 +1,11 @@
 @import "src/main-styles";
 
 .title {
-    max-height: 6rem;
-    min-height: 6rem;
-    background-color: $light-black;
+    height: 6rem;
+    background-color: $background2;
+    border-bottom-width: 1px;
+    border-color: $border-color;
+    border-style: solid;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,4 +17,38 @@
     margin-left: 1rem;
     width: 4rem;
     height: 4rem;
+}
+
+#title {
+    color: $white;
+    margin-left: 0.5rem;
+    min-width: 18rem;
+}
+
+.current-tab {
+    background-color: $background2;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-color: $border-color;
+    border-style: solid;
+    flex: 1 1 100%;
+    height: 100%;
+}
+
+#main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
 }

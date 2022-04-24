@@ -10,9 +10,10 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { GamesComponent } from './pages/main-page/components/games/games.component';
 import { GameComponent } from './pages/main-page/components/games/game/game.component';
 import { NewsComponent } from './pages/main-page/components/news/news.component';
-import { AccountsComponent } from './pages/main-page/components/accounts/accounts.component';
+import { AccountComponent } from './pages/main-page/components/account/account.component';
 import { AboutComponent } from './pages/main-page/components/about/about.component';
 import { HelpComponent } from './pages/main-page/components/help/help.component';
+import { SidePanelComponent } from './pages/side-panel/side-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { HelpComponent } from './pages/main-page/components/help/help.component'
     GamesComponent,
     GameComponent,
     NewsComponent,
-    AccountsComponent,
+    AccountComponent,
     AboutComponent,
     HelpComponent,
+    SidePanelComponent,
   ],
   imports: [
     BrowserModule,
