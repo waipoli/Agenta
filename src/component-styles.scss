@@ -1,37 +1,36 @@
 @import "main-styles";
 
-button {
+.apply-button {
   min-height: 1rem;
+  font-weight: 200;
   color: $white;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
   background-color: $background;
+
   border-style: solid;
   border-radius: 8px;
+  border-width: 0px;
+  border-color: $yellow;
+  transform: scale(1);
+  transition: border-width 0.1s, transform 0s, background-color 0s;
   cursor: pointer;
   outline: none;
-  border-color: $yellow;
-  border-width: 0;
-  transition: border-width 0.1s, transform 0.1s;
 
   &:hover {
-    border-color: $yellow;
     border-width: 3px;
-    border-style: solid;
     color: #fff;
   }
 
   &:active {
     background-color: $yellow;
     color: #fff;
-    transform: scale(0.92);
-    border-color: $yellow;
-    border-width: 3px;
-    border-style: solid;
+    transform: scale(0.99);
   }
 }
+
 
 .text-field {
   background-color: $background;
@@ -49,7 +48,7 @@ button {
   transition: all 0.15s ease 0s;
 
   &:focus {
-    outline-width: 0;
+    outline-width: 0px;
     border-width: 3px;
     border-color: $yellow;
   }
@@ -63,11 +62,11 @@ button {
   margin-left: 1.4rem;
 }
 
-.link {
-  color: $white;
-  &:hover{
-    text-decoration: underline;
-  }
+.title-text {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #EEEEEE;
+  font-size: 28px;
 }
 
 .newbie-content {
@@ -86,9 +85,10 @@ button {
   justify-content: center;
 }
 
-.title-text {
-  margin-top: 0.6rem;
-  font-weight: 600;
-  color: #EEEEEE;
-  font-size: 28px;
+.link {
+  color: $white;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

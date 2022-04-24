@@ -1,0 +1,18 @@
+@import "src/main-styles";
+
+.title {
+    max-height: 6rem;
+    min-height: 6rem;
+    background-color: $light-black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+#title-icon {
+    margin-left: 1rem;
+    width: 4rem;
+    height: 4rem;
+}

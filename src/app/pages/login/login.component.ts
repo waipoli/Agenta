@@ -22,6 +22,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  clicked() {
+    console.log("bob")
+  }
+
   try_sign_in(name: string, password: string) {
     this._api.login(name, password).subscribe((res: HttpResponse<any>) => {
       localStorage.setItem("isLogin", res.body.login);
