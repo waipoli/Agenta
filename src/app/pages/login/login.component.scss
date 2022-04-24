@@ -1,126 +1,21 @@
-@import "src/main-styles";
+@import "src/component-styles";
 
 .login-content {
   margin-top: 0.75rem;
   min-width: 30rem;
   min-height: 15rem;
+
   background-color: $background2;
-  border-radius: 8px;
-  border-style: solid;
-  border-color: $border-color;
-  border-width: 1px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
 
-.icon {
-   min-width: 7rem;
-   min-height: 7rem;
-}
-
-
-.username-text {
-  font-family: 'Open Sans';
-  font-weight: 200;
-  color: #EEEEEE;
-  font-size: 20px;
-  margin-top: 1rem;
-  margin-left: 1.4rem;
-}
-
-.password-text {
-  font-family: 'Open Sans';
-  font-weight: 200;
-  color: #EEEEEE;
-  font-size: 20px;
-  margin-top: 1rem;
-  margin-left: 1.4rem;
-}
-
-
-.title-text {
-  margin-top: 0.6rem;
-  font-family: 'Open Sans';
-  font-weight: 600;
-  color: #EEEEEE;
-  font-size: 28px;
-}
-
-#login-button {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin: auto;
-}
-
-
-.register-content {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 544px;
-  height: 68px;
-  background-color: $background;
-  border-radius: 18px;
+  border-radius: 8px;
   border-style: solid;
   border-color: $border-color;
   border-width: 1px;
-}
-
-.register-text {
-  //position: fixed;
-  //top: 100%;
-  //left: 100%;
-  transform: translate(25%, 25%);
-  font-family: 'Open Sans';
-  font-weight: 600;
-  color: #EEEEEE;
-  font-size: 28px;
-}
-
-#link-recover {
-  color: $blue;
-
-  &:hover {
-    color: $blue;
-    text-decoration: underline;
-  }
-}
-
-#link-dots {
-  &:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
-}
-
-#link-register-dots {
-  &:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
-}
-
-#link-register {
-  position: fixed;
-  max-width: 1000px;
-  max-height: 1000px;
-  left: 33%;
-  top: 0;
-  color: $blue;
-
-  &:hover {
-    color: $blue;
-    text-decoration: underline;
-  }
-}
-
-#newbie-link {
-  text-align: center;
 }
 
 .login-panel {
@@ -133,26 +28,16 @@
   padding-bottom: 5rem;
 }
 
-.newbie-content {
-  color: $white;
-  margin-top: 1.75rem;
-  min-width: 30rem;
-  min-height: 2.1rem;
-  background-color: $background2;
-  border-radius: 8px;
-  border-style: solid;
-  border-color: $border-color;
-  border-width: 1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.icon {
+  width: 10rem;
+  height: 10rem;
+}
+
+#login-button {
+  padding: 1rem 5rem;
+  margin: auto;
 }
 
 #link-signup {
   color: $blue;
-}
-
-#bad_text{
-  color: orangered;
 }

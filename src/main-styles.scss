@@ -1,7 +1,4 @@
-// This is where we put global styles and change variable values
-
-// Import Fonts (Lato and Nunito)
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $white: #EEEEEE;
 $yellow: #EBC465;
@@ -12,111 +9,16 @@ $light: #f8f8f8;
 $border-color: #3F3F3F;
 $light-black: #292C31;
 
-// Update Bulma's global variables
-$primary: $yellow;
-
-$link: $light;
-
-
-// Update some of Bulma's component variables
-
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-
-// Set custom global styles (will be applied to whole app)
-
-
-
 html, body {
   height: 100%;
-  font-family: 'Open Sans';
+  font-family: 'Roboto';
 }
 
 html {
   background: linear-gradient(to right top, $background, $background);
 }
 
-button {
-
-  min-height: 1rem;
-  font-weight: 200;
-  color: $white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  background-color: $background;
-  border-style: solid;
-  border-width: 1px;
-  border-color: $border-color;
-  border-radius: 8px;
-  //box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.1s ease 0s;
-  cursor: pointer;
-  outline: none;
-  border-color: $yellow;
-  border-width: 0px;
-  border-style: solid;
-  &:hover {
-    //background-color: #F8DD9D;
-    //box-shadow: 0px 4px 20px rgba(252, 186, 3, 0.4);
-    border-color: $yellow;
-    border-width: 3px;
-    border-style: solid;
-    color: #fff;
-    //transform: scale(1.02);
-  }
-
-  &:active {
-    transition: all 0.1s ease 0s;
-    background-color: $yellow;
-    //box-shadow: 0px 4px 20px rgba(252, 186, 3, 0.4);
-    color: #fff;
-    transition: all 0.25xs ease 0s;
-    transform: scale(0.92);
-    border-color: $yellow;
-    border-width: 3px;
-    border-style: solid;
-  }
-}
-
-
-.text-field {
-  background-color: $background;
-  border-radius: 6px;
-  color: #EEEEEE;
-  font-size: 20px;
-
-  border-color: $border-color;
-  border-style: solid;
-  border-width: 1px;
-
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  transition: all 0.15s ease 0s;
-  &:focus {
-    //transform: scale(0.95);
-    //box-shadow: 0px 0px 0px 2px $yellow;
-    outline-width: 0px;
-    border-width: 3px;
-    border-color: $yellow;
-  }
-}
-
-
-.link {
-  color: $blue;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.link-dots {
-  &:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-  }
-}

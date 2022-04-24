@@ -1,16 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from "./pages/login/login.component";
+import { MainPageComponent } from './pages/main-page/main-page.component';
 import {RegisterComponent} from "./pages/register/register.component";
-import {MainComponent} from "./pages/main/main.component";
-import {TaskComponent} from "./pages/task/task.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: '', component: MainPageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'main-page', component: MainComponent},
-  {path: 'tasks/:taskId', component: TaskComponent}
 ];
 
 @NgModule({
