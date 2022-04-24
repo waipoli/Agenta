@@ -1,26 +1,24 @@
-<div id="bad_text" *ngIf="isCorrectLogin == false">We dont have this account</div>
-
 <div class="login-panel">
   <img src="favicon.ico" class="icon">
   <div class="title-text">
-    <h1>Sign in to <strong><a href="https://ag45.dots.org.ua/help" class="link-dots">{{title}}</a></strong></h1>
+    <h1>Sign in to <strong><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></strong></h1>
   </div>
 
   <div class="login-content">
-    <div class="username-text">
+    <div class="info-text">
       <p>Username</p>
     </div>
     <input class="text-field" #nameInput>
-    <div class="password-text">
+    <div class="info-text">
       <p>Password</p>
     </div>
     <input type="password" class="text-field" id="password" #pwdInput>
-    <button id="login-button" (click)="try_sign_in(nameInput.value,pwdInput.value)">Sign in</button>
+    <button  id="login-button" (click)="try_sign_in(nameInput.value,pwdInput.value)">Sign in</button>
   </div>
 
   <div class="newbie-content">
-    <div id="newbie-link">New to <b><a href="https://ag45.dots.org.ua/help" class="link-dots">{{title}}</a></b>? <a
-      href="/register" class="link">Sign up</a>!
+    <div id="newbie-link">New to <b><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></b>? <a
+      href="/register" id="link-signup" class="link">Sign up</a>!
     </div>
   </div>
   <div id="suportinfo">
