@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GamesComponent implements OnInit {
 
-  gamesCount = 5;
+  gamesCount = 50;
 
   constructor() {
   }

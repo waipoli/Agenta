@@ -1,13 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
-$white: #EEEEEE;
+//$text-color: #EEEEEE;
+//$hovered-color: #EEEEEE;
+//$yellow: #EBC465;
+//$background2: rgba(52, 52, 52, 0.4);
+//$background: #2E2E2E;
+//$blue: #58A6FF;
+//$light: #f8f8f8;
+//$border-color: #3F3F3F;
+//$block-color: #292C31;
+//$block-color2: #3A3A3A;
+
+
+$text-color: #6B6B6B;
+$hovered-color: #7B7B7B;
 $yellow: #EBC465;
-$background2: rgba(52, 52, 52, 0.4);
-$background: #2E2E2E;
+$background2: rgba(255, 255, 255, 0.4);
+$background: #F4F4F4;
 $blue: #58A6FF;
 $light: #f8f8f8;
-$border-color: #3F3F3F;
-$light-black: #292C31;
+$border-color: #E5E5E5;
+$block-color: #FFFFFF;
+$block-color2: #FFFFFF;
+
 
 $control-border-width: 2px;
 $input-border-color: transparent;
@@ -15,9 +30,32 @@ $input-shadow: none;
 
 html, body {
   height: 100%;
-  font-family: 'Roboto';
+  font-family: 'Space Grotesk';
 }
 
 html {
   background: linear-gradient(to right top, $background, $background);
 }
+
+h1 {
+  color: $text-color;
+}
+
+h2 {
+  color: $text-color;
+}
+
+h3 {
+  color: $text-color;
+}
+
+h4 {
+  color: $text-color;
+}
+
+
+
+
+
+
+

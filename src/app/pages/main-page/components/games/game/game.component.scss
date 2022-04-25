@@ -1,8 +1,10 @@
+@import "src/main-styles";
+
 .Game{
   width: 10rem;
   height: 10rem;
-  color: white;
-  background-color: #3A3A3A;
+  color: $text-color;
+  background-color: $block-color2;
   border-radius: 8px;
   margin-left: 1.5rem;
   margin-top: 1.5rem;

@@ -1,7 +1,9 @@
 .line{
+  //flex: 1 1 100%;
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  height: 10px;
   //align-content: center;
 }

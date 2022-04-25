@@ -3,7 +3,7 @@
 .apply-button {
   min-height: 1rem;
   font-weight: 200;
-  color: $white;
+  color: $text-color;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -21,12 +21,12 @@
 
   &:hover {
     border-width: 3px;
-    color: #fff;
+    color: $hovered-color;
   }
 
   &:active {
     background-color: $yellow;
-    color: #fff;
+    color: $hovered-color;
     transform: scale(0.99);
   }
 }
@@ -35,7 +35,7 @@
 .text-field {
   background-color: $background;
   border-radius: 6px;
-  color: #EEEEEE;
+  color: $text-color;
   font-size: 20px;
 
   border-color: $border-color;
@@ -56,7 +56,7 @@
 
 .info-text {
   font-weight: 300;
-  color: #EEEEEE;
+  color: $text-color;
   font-size: 20px;
   margin-top: 1rem;
   margin-left: 1.4rem;
@@ -70,7 +70,7 @@
 }
 
 .newbie-content {
-  color: $white;
+  color: $text-color;
   margin-top: 1.75rem;
   min-width: 30rem;
   min-height: 2.1rem;
@@ -86,7 +86,7 @@
 }
 
 .link {
-  color: $white;
+  color: $text-color;
 
   &:hover {
     text-decoration: underline;
