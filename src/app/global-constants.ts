@@ -1,3 +1,3 @@
 export class GlobalConstants{
-  public static title: string = "Agenta";
+  public static title: string = "AGENTA";
 }

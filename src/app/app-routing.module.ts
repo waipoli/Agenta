@@ -14,8 +14,6 @@ const routes: Routes = [
     path: '', component: MainPageComponent, children: [
       { path: 'news', component: NewsComponent },
       { path: 'games', component: GamesComponent },
-      { path: 'account', component: AccountComponent },
-      { path: 'about', component: AboutComponent },
       { path: 'help', component: HelpComponent }
     ]
   },

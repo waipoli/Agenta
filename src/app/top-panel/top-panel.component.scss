@@ -1,0 +1,42 @@
+@import "src/main-styles";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+.tab-button {
+  color: #6B6B6B;
+  border-width: 0px;
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Space Grotesk';
+  margin-left: 1rem;
+  cursor: pointer;
+  
+  &:hover {
+    color: $yellow;
+  }
+}
+
+#top-panel {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+}
+
+#title-icon {
+  width: 3.45rem;
+  height: 3.45rem;
+  margin-left: 5.6rem;
+}
+
+#title {
+  color: #000000;
+  font-weight: 600;
+  font-size: 35px;
+  margin-left: 1rem;
+}
+
+#top-panel-buttons {
+  margin-left: 2.5rem;
+}
