@@ -13,7 +13,7 @@ import { NewsComponent } from './pages/main-page/components/news/news.component'
 import { AccountComponent } from './pages/main-page/components/account/account.component';
 import { AboutComponent } from './pages/main-page/components/about/about.component';
 import { HelpComponent } from './pages/main-page/components/help/help.component';
-import { TopPanelComponent } from './top-panel/top-panel.component';
+import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
 
 @NgModule({
   declarations: [
