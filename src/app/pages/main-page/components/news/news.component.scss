@@ -1,0 +1,11 @@
+.news{
+  //flex: 1 1 100%;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  //flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 10px;
+  //align-content: center;
+}

@@ -53,9 +53,21 @@ h4 {
   color: $text-color;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+::-webkit-scrollbar-track {
+  background-color: $block-color2;
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: $yellow;
+  border-radius: 8px;
+}
 
-
-
-
+::-webkit-scrollbar-button{
+  &:hover {
+    transform: scale(0.9);
+  }
+}

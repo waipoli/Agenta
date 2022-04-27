@@ -14,6 +14,8 @@ import { AccountComponent } from './pages/main-page/components/account/account.c
 import { AboutComponent } from './pages/main-page/components/about/about.component';
 import { HelpComponent } from './pages/main-page/components/help/help.component';
 import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
+import {NewComponent} from "./pages/main-page/components/news/new/new.component";
+import { OneNewComponent } from './pages/main-page/components/news/one-new/one-new.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TopPanelComponent } from './pages/main-page/components/top-panel/top-pa
     AccountComponent,
     AboutComponent,
     HelpComponent,
-    TopPanelComponent
+    TopPanelComponent,
+    NewComponent,
+    OneNewComponent,
   ],
   imports: [
     BrowserModule,

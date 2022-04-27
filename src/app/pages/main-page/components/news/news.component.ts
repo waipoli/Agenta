@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  newsCount = 50;
 
-  constructor() { }
+  constructor() {
+  }
+
+  counter(i: number) {
+    return new Array(i);
+  }
 
   ngOnInit(): void {
   }

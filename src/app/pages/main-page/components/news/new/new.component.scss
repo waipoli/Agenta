@@ -1,0 +1,17 @@
+@import "src/main-styles";
+
+.New {
+  display: flex;
+  width: 50rem;
+  height: 20rem;
+  color: $text-color;
+  background-color: $block-color2;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.06);
+  }
+}
