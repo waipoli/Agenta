@@ -15,7 +15,6 @@ import { AboutComponent } from './pages/main-page/components/about/about.compone
 import { HelpComponent } from './pages/main-page/components/help/help.component';
 import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
 import {NewComponent} from "./pages/main-page/components/news/new/new.component";
-import { OneNewComponent } from './pages/main-page/components/news/one-new/one-new.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { OneNewComponent } from './pages/main-page/components/news/one-new/one-n
     HelpComponent,
     TopPanelComponent,
     NewComponent,
-    OneNewComponent,
   ],
   imports: [
     BrowserModule,

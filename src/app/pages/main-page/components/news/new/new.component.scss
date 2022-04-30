@@ -1,6 +1,8 @@
 @import "src/main-styles";
 
 .New {
+  cursor: pointer;
+
   display: flex;
   width: 50rem;
   height: 20rem;
@@ -9,9 +11,21 @@
   border-radius: 12px;
   margin-bottom: 2rem;
   margin-top: 4rem;
-  transition: transform 0.2s;
+  transition: transform 0.2s, height 0.7s;
+  overflow-y: hidden;
 
   &:hover {
     transform: scale(1.06);
+  }
+
+  &.open{
+    height: 100rem;
+    overflow-y: scroll;
+
+  }
+  &.close{
+    height: 20rem;
+    overflow-y: hidden;
+
   }
 }

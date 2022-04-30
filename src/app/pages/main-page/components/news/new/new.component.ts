@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,12 +11,15 @@ export class NewComponent implements OnInit {
   constructor(private _router: Router) {
   }
 
-  id: string = "132";
+  // @ts-ignore
+  @ViewChild('new') sidebar: ElementRef;
 
   ngOnInit(): void {
   }
 
+  isOpen: boolean = false;
+
   click(): void {
-    this._router.navigate(["/new/" + this.id])
+    this.isOpen = !this.isOpen;
   }
 }

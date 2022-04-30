@@ -8,7 +8,6 @@ import {HelpComponent} from './pages/main-page/components/help/help.component';
 import {NewsComponent} from './pages/main-page/components/news/news.component';
 import {MainPageComponent} from './pages/main-page/main-page.component';
 import {RegisterComponent} from "./pages/register/register.component";
-import {OneNewComponent} from "./pages/main-page/components/news/one-new/one-new.component";
 
 const routes: Routes = [
   {
@@ -18,7 +17,7 @@ const routes: Routes = [
       {path: 'help', component: HelpComponent}
     ]
   },
-  {path: "new/:id", component: OneNewComponent},
+
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
 ];
