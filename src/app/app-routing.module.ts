@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from "./pages/login/login.component";
-import { AboutComponent } from './pages/main-page/components/about/about.component';
-import { AccountComponent } from './pages/main-page/components/account/account.component';
 import { GamesComponent } from './pages/main-page/components/games/games.component';
 import { HelpComponent } from './pages/main-page/components/help/help.component';
 import { NewsComponent } from './pages/main-page/components/news/news.component';

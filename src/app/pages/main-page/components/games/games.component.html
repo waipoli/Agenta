@@ -1,6 +1,7 @@
-<div class="line" >
-  <div *ngFor="let i of counter(gamesCount)">
-  <app-game></app-game>
+<div id="header">CURRENT GAMES</div>
+<div id="games">
+  <div *ngFor="let image of images">
+    
+    <app-game path="{{image}}"></app-game>
   </div>
 </div>
-

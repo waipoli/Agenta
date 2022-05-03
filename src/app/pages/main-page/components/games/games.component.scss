@@ -1,9 +1,27 @@
-.line{
-  //flex: 1 1 100%;
-  flex-direction: row;
+@import "src/main-styles";
+
+#games {
+  width: 95%;
   display: flex;
+  margin: auto;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  height: 10px;
-  //align-content: center;
+}
+
+#header {
+  width: 90%;
+  border-width: 0px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-color: $hovered-color;
+  color: $text-color;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-weight: 100;
+  font-size: 50px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5rem;
 }

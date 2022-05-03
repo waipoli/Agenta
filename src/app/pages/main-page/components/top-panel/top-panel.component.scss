@@ -17,11 +17,12 @@
   &.selected {
     color: $yellow;
     font-weight: 600;
+    text-decoration: underline;
   }
 }
 
 #top-panel {
-  background-color: $background2;
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,8 +36,8 @@
 }
 
 #title {
-  color: $text-color;
-  font-weight: 600;
+  color: black;
+  font-weight: 1000;
   font-size: 35px;
   margin-left: 1rem;
 }
