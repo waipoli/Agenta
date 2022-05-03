@@ -1,0 +1,31 @@
+@import "src/main-styles";
+
+.New {
+  cursor: pointer;
+
+  display: flex;
+  width: 50rem;
+  height: 20rem;
+  color: $text-color;
+  background-color: $block-color2;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  transition: transform 0.06s, height 0.7s, box-shadow 0.06s;
+  box-shadow: 4px 2px 20px 0px rgb(0, 0, 0, .4);
+  overflow-y: hidden;
+
+  &:hover {
+    box-shadow: 4px 2px 30px 1px rgb(0, 0, 0, .4);
+    transform: scale(1.01);
+  }
+
+  &.open{
+    height: 100rem;
+    overflow-y: scroll;
+  }
+  &.close{
+    height: 20rem;
+    overflow-y: hidden;
+  }
+}

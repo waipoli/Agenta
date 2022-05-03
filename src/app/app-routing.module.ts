@@ -10,13 +10,14 @@ import { RegisterComponent } from "./pages/register/register.component";
 const routes: Routes = [
   {
     path: '', component: MainPageComponent, children: [
-      { path: 'news', component: NewsComponent },
-      { path: 'games', component: GamesComponent },
-      { path: 'help', component: HelpComponent }
+      {path: 'news', component: NewsComponent},
+      {path: 'games', component: GamesComponent},
+      {path: 'help', component: HelpComponent}
     ]
   },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { GameComponent } from './pages/main-page/components/games/game/game.comp
 import { NewsComponent } from './pages/main-page/components/news/news.component';
 import { HelpComponent } from './pages/main-page/components/help/help.component';
 import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
+import {NewComponent} from "./pages/main-page/components/news/new/new.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TopPanelComponent } from './pages/main-page/components/top-panel/top-pa
     GameComponent,
     NewsComponent,
     HelpComponent,
-    TopPanelComponent
+    TopPanelComponent,
+    NewComponent,
   ],
   imports: [
     BrowserModule,

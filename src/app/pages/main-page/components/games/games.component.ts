@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class GamesComponent implements OnInit {
   images = ['./assets/images/chess.jpg', './assets/images/tictactoe.jpg'];
 
-  gamesCount = 5;
+  gamesCount = 50;
 
   constructor() {
   }
