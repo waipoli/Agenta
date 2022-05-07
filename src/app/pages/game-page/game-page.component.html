@@ -2,11 +2,17 @@
   <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
   <span id="title">{{title}}</span>
   <div id="top-panel-buttons">
-    <button class="tab-button"  routerLink="problem"></button>
+    <button class="tab-button" routerLink=""><i class='fas fa-angle-left'></i></button>
     <button [class.selected]="isButtonSelected('problem')" class="tab-button" routerLink="problem">Problem</button>
     <button [class.selected]="isButtonSelected('submit')" class="tab-button" routerLink="submit">Submit</button>
-    <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My submission</button>
-    <button [class.selected]="isButtonSelected('standings')" class="tab-button" routerLink="standings">Standings</button>
+    <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My
+      submission
+    </button>
+    <button [class.selected]="isButtonSelected('standings')" class="tab-button" routerLink="standings">Standings
+    </button>
   </div>
+  <span class="text">Chess Game ends in 3:10:15:2</span>
+  <img class="account" src="assets/images/account.svg">
+
 </div>
 <router-outlet></router-outlet>

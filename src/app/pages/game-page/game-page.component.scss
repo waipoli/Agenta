@@ -14,7 +14,7 @@
   margin-left: 1rem;
 }
 
-#top-panel{
+#top-panel {
   color: $text-color;
   border-top-width: 1rem;
   background-color: #fff;
@@ -24,7 +24,7 @@
   height: 5rem;
 }
 
-#top-panel-buttons{
+#top-panel-buttons {
   margin-left: 1.5rem;
 }
 
@@ -51,15 +51,24 @@
     text-decoration: underline;
     //transform: scale(1.1, 1.1);
   }
-  &.left{
-    box-sizing: border-box;
-    transform: scale(var(--ggs,1));
-    width: 22px;
-    height: 22px;
-    border: 2px solid transparent;
-    border-radius: 100px
+}
+
+.text{
+  margin-left: 5rem;
+  display: flex;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+
+  color: #FF9292;
+  transition: transform 0.1s;
+
+  &:hover {
+    transform: scale(1.03, 1.03);
   }
 }
 
-
-
+.account{
+  margin-left: 20.47rem;
+}
