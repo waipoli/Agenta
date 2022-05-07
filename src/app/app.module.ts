@@ -13,6 +13,11 @@ import { NewsComponent } from './pages/main-page/components/news/news.component'
 import { HelpComponent } from './pages/main-page/components/help/help.component';
 import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
 import {NewComponent} from "./pages/main-page/components/news/new/new.component";
+import { GamePageComponent } from './pages/game-page/game-page.component';
+import { ProblemComponent } from './pages/game-page/components/problem/problem.component';
+import { SubmitComponent } from './pages/game-page/components/submit/submit.component';
+import { MySubmissionComponent } from './pages/game-page/components/my-submission/my-submission.component';
+import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,11 @@ import {NewComponent} from "./pages/main-page/components/news/new/new.component"
     HelpComponent,
     TopPanelComponent,
     NewComponent,
+    GamePageComponent,
+    ProblemComponent,
+    SubmitComponent,
+    MySubmissionComponent,
+    StandingsComponent,
   ],
   imports: [
     BrowserModule,

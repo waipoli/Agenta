@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./games.component.scss']
 })
 export class GamesComponent implements OnInit {
-  images = ['./assets/images/chess.jpg', './assets/images/tictactoe.jpg'];
+  images = ['./assets/images/chess.jpg', './assets/images/tictactoe.jpg','./assets/images/gi.png'];
 
   gamesCount = 50;
 

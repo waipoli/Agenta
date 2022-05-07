@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 @import "src/main-styles";
 
+#title-icon {
+  width: 3.45rem;
+  height: 3.45rem;
+  margin-left: 5.6rem;
+}
+
+#title {
+  color: black;
+  font-weight: 1000;
+  font-size: 35px;
+  margin-left: 1rem;
+}
+
+#top-panel{
+  color: $text-color;
+  border-top-width: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+}
+
+#top-panel-buttons{
+  margin-left: 1.5rem;
+}
+
 .tab-button {
   color: $block-color;
   border-width: 0;
@@ -26,27 +53,3 @@
   }
 }
 
-#top-panel {
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 5rem;
-}
-
-#title-icon {
-  width: 3.45rem;
-  height: 3.45rem;
-  margin-left: 5.6rem;
-}
-
-#title {
-  color: black;
-  font-weight: 1000;
-  font-size: 35px;
-  margin-left: 1rem;
-}
-
-#top-panel-buttons {
-  margin-left: 2.5rem;
-}

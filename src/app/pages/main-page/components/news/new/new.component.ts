@@ -10,7 +10,7 @@ export class NewComponent implements OnInit {
 
   constructor(private _router: Router) {
   }
-
+  text = "<button></button>"
   // @ts-ignore
   @ViewChild('new') sidebar: ElementRef;
 
