@@ -51,5 +51,15 @@
     text-decoration: underline;
     //transform: scale(1.1, 1.1);
   }
+  &.left{
+    box-sizing: border-box;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+  }
 }
+
+
 

@@ -2,10 +2,11 @@
   <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
   <span id="title">{{title}}</span>
   <div id="top-panel-buttons">
-    <button class="tab-button" routerLink="problem">Problem</button>
-    <button class="tab-button" routerLink="submit">Submit</button>
-    <button class="tab-button" routerLink="my-submission">My submission</button>
-    <button class="tab-button" routerLink="standings">Standings</button>
+    <button class="tab-button"  routerLink="problem"></button>
+    <button [class.selected]="isButtonSelected('problem')" class="tab-button" routerLink="problem">Problem</button>
+    <button [class.selected]="isButtonSelected('submit')" class="tab-button" routerLink="submit">Submit</button>
+    <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My submission</button>
+    <button [class.selected]="isButtonSelected('standings')" class="tab-button" routerLink="standings">Standings</button>
   </div>
 </div>
 <router-outlet></router-outlet>
