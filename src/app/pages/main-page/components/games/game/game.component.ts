@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Input} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-game',
@@ -8,10 +9,15 @@ import { Input } from '@angular/core';
 })
 export class GameComponent implements OnInit {
   @Input() path?: string;
+  @Input() id?: string;
 
-  constructor() { }
+  constructor(private _router: Router) {
+  }
 
   ngOnInit(): void {
   }
 
+  goto(path: string): void {
+    this._router.navigate([path + this.id]);
+  }
 }

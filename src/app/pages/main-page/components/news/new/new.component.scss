@@ -2,7 +2,11 @@
 
 .New {
   cursor: pointer;
-
+  display: flex;
+  position: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   display: flex;
   width: 50rem;
   height: 20rem;
@@ -28,4 +32,14 @@
     height: 20rem;
     overflow-y: hidden;
   }
+}
+
+.text{
+  display: flex;
+  position: center;
+  align-content: center;
+  align-items: center;
+  width: 98%;
+  height: 99%;
+  flex-direction: column;
 }

@@ -32,7 +32,7 @@
   color: $block-color;
   border-width: 0;
   background-color: transparent;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-left: 1rem;
   cursor: pointer;
@@ -53,13 +53,13 @@
   }
 }
 
-.text{
-  margin-left: 5rem;
+.text {
+  //margin-left: 5rem;
   display: flex;
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 1.6rem;
 
   color: #FF9292;
   transition: transform 0.1s;
@@ -69,6 +69,6 @@
   }
 }
 
-.account{
-  margin-left: 20.47rem;
+.account {
+  //margin-left: 20.7rem;
 }
