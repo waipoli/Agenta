@@ -8,13 +8,12 @@ import { GlobalConstants } from 'src/app/global-constants';
 })
 export class TopPanelComponent implements OnInit {
   title = GlobalConstants.title;
-  
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  
+
   isButtonSelected(buttonName: string): boolean {
-    return buttonName === this.router.url.replace('/', '').split('/')[0];
-  }
+    return buttonName === this.router.url.replace('/', '').split('/')[0];  }
 }
