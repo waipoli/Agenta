@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -19,10 +23,7 @@ import { SubmitComponent } from './pages/game-page/components/submit/submit.comp
 import { MySubmissionComponent } from './pages/game-page/components/my-submission/my-submission.component';
 import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatOptionModule } from '@angular/material/core';
-import { MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { MatSelectModule} from '@angular/material/select';
     ProblemComponent,
     SubmitComponent,
     MySubmissionComponent,
-    StandingsComponent,
+    StandingsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +49,9 @@ import { MatSelectModule} from '@angular/material/select';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule,
+    MatInputModule,
     MatFormFieldModule,
-    MatOptionModule,
-    MatSelectModule
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

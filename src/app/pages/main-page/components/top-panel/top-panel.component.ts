@@ -15,6 +15,6 @@ export class TopPanelComponent implements OnInit {
   }
   
   isButtonSelected(buttonName: string): boolean {
-    return buttonName === this.router.url.replace('/', '');
+    return buttonName === this.router.url.replace('/', '').split('/')[0];
   }
 }
