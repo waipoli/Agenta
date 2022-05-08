@@ -49,9 +49,12 @@ input[type='file'] {
 
 h1 {
     color: black;
-    font-size: 4.5rem;
-    font-weight: bold;
+    font-size: 4.5rem !important;
+    font-weight: bold !important;
     text-align: center;
+    width: 100%;
+    margin-top: 2rem !important;
+    margin-bottom: 2.5rem !important;
 }
 
 h2 {
@@ -100,6 +103,7 @@ h2 {
     font-size: 1.3rem;
     color: black;
     cursor: pointer;
+    background-color: white;
 }
 
 #bot-name-input {
@@ -136,14 +140,15 @@ h2 {
     font-size: 1.8rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.15s;
+    transition: transform 0.1s;
     &:hover {
         background-color: #ffca44;
-        transform: scale(1.03);
+        transform: scale(1.01);
     }
     &:active {
-        background-color: #ffc125;
         transition: transform 0s;
+        background-color: #ffc125;
         transform: scale(1.00);
     }
+    box-shadow: 0px 0px 10px 2px rgb(255, 193, 36, 0.2)
 }

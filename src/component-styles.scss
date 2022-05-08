@@ -96,7 +96,7 @@
   color: $block-color;
   border-width: 0;
   background-color: transparent;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   margin-left: 1rem;
   border-style: solid;
@@ -121,4 +121,25 @@
   font-weight: 1000;
   font-size: 2.1rem;
   margin-left: 1rem;
+}
+
+
+.account {
+  margin-right: 6rem;
+}
+
+#right-part {
+  flex: 1 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.account {
+  margin-right: 6rem;
+}
+
+.right-part {
+  flex: 1 1;
+  display: flex;
+  justify-content: flex-end;
 }
