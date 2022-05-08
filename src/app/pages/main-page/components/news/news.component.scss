@@ -1,4 +1,6 @@
-.news{
+@import "src/main-styles";
+
+.news {
   //flex: 1 1 100%;
   flex-direction: column;
   align-content: center;
@@ -6,6 +8,48 @@
   display: flex;
   //flex-wrap: wrap;
   justify-content: flex-start;
-  height: 10px;
+  height: 10rem;
+  //overflow: inherit;
   //align-content: center;
+}
+
+.switch {
+  display: flex;
+  flex-direction: row;
+}
+
+.switch-button {
+  height: 3rem;
+  //width: 3rem;
+  min-width: 3rem;
+  width: 80%;
+  color: $text-color;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: white;
+  margin-left: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 19px;
+  //justify-content: center;
+  //align-items: center;
+  //align-content: center;
+  cursor: pointer;
+  outline: none;
+  //text-align: center;
+  border-color: #00000000;
+  transition: background-color 0.3s;
+  &.able{
+    &:hover{
+      background-color: #9d9d9d;
+    }
+    &.selected{
+      background-color: $yellow;
+    }
+  }
+  &.disable{
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+  }
 }
