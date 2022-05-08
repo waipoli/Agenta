@@ -93,3 +93,26 @@
   }
 }
 
+.tab-button {
+  color: $block-color;
+  border-width: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  border-style: solid;
+  border-color: #FFCF59;
+  cursor: pointer;
+  font-family: "Space Grotesk";
+  height: 5rem;
+  &:hover {
+    color: $yellow;
+  }
+
+  &.selected {
+    color: $yellow;
+    font-weight: 600;
+    border-bottom-width: 3px;
+    //transform: scale(1.1, 1.1);
+  }
+}

@@ -7,7 +7,7 @@
         <div id="upload-row">
             <span id="file-selected">{{fileSelected}}</span>
             <label class="custom-file-upload">
-                <img src="./assets/images/upload-icon.png" id="upload-icon">
+                <img src="./assets/images/upload-icon-black.png" id="upload-icon">
                 <input type="file" accept=".zip" (change)="onFileSelected($event)">
             </label>
         </div>
@@ -16,29 +16,23 @@
         <h2>Step 2.</h2>
         <h2>Choose Language</h2>
 
-        <form id="form-lang">
-            <label id="language">Language:</label>
+        <label id="label-language" for="language">Language:</label>
 
-            <!-- <select name="language" id="language-select">
-                <option value="c++" class="opt">C++</option>
-                <option value="python" class="opt">Python</option>
-                <option value="java" class="opt">Java</option>
-            </select> -->
-
-            <!-- <mat-form-field appearance="fill">
-                <mat-label>Panel color</mat-label>
-                <mat-select [formControl]="panelColor"
-                            panelClass="example-panel-{{panelColor.value}}">
-                  <mat-option value="red">Red</mat-option>
-                  <mat-option value="green">Green</mat-option>
-                  <mat-option value="blue">Blue</mat-option>
-                </mat-select>
-              </mat-form-field> -->
-        </form>
-
-       
+        <select name="language" id="select-language">
+            <option value="c++">C++</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="pascal">Pascal</option>
+        </select>
     </div>
-    <!-- <div class="step">
+    <div class="step">
         <h2>Step 3.</h2>
         <h2>Give your bot a name</h2>
-    </div> -->
+
+        <label id="label-name" for="namr">Name:</label>
+        <input id="bot-name-input">
+
+    </div>
+
+    <button id="submit-button">Submit Bot</button>
+<div>

@@ -28,31 +28,6 @@
   margin-left: 1.5rem;
 }
 
-.tab-button {
-  color: $block-color;
-  border-width: 0;
-  background-color: transparent;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-left: 1rem;
-  cursor: pointer;
-  font-family: "Space Grotesk";
-  transition: transform 0.1s;
-
-  &:hover {
-    color: $yellow;
-    transform: scale(1.1, 1.1);
-  }
-
-  &.selected {
-    color: $yellow;
-    text-decoration: underline;
-    font-weight: 600;
-    text-decoration: underline;
-    //transform: scale(1.1, 1.1);
-  }
-}
-
 .text {
   //margin-left: 5rem;
   display: flex;
