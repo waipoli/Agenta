@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {APIService} from "../../api.service";
 import {HttpResponse} from "@angular/common/http";
 import {GlobalConstants} from "../../global-constants";
 
@@ -11,7 +10,7 @@ import {GlobalConstants} from "../../global-constants";
 export class RegisterComponent implements OnInit {
   title = GlobalConstants.title;
 
-  constructor(private api: APIService) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -30,12 +29,12 @@ export class RegisterComponent implements OnInit {
       console.log("username must be not empty");
       return;
     }
-    this.api.register(name, password).subscribe((req: HttpResponse<any>) => {
-      if (req.body.register != 0) {
-        console.log("Successfully register!!!");
-      } else {
-        console.log("this name already used((");
-      }
-    });
+    // this.api.register(name, password).subscribe((req: HttpResponse<any>) => {
+    //   if (req.body.register != 0) {
+    //     console.log("Successfully register!!!");
+    //   } else {
+    //     console.log("this name already used((");
+    //   }
+    // });
   }
 }

@@ -15,7 +15,7 @@ import {StandingsComponent} from "./pages/game-page/components/standings/standin
 const routes: Routes = [
   {
     path: '', component: MainPageComponent, children: [
-      {path: 'news', component: NewsComponent},
+      {path: 'news/:id', component: NewsComponent},
       {path: 'games', component: GamesComponent},
       {path: 'help', component: HelpComponent}
     ]
