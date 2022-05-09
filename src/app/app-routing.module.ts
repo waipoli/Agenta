@@ -9,7 +9,7 @@ import {RegisterComponent} from "./pages/register/register.component";
 import {GamePageComponent} from "./pages/game-page/game-page.component";
 import {ProblemComponent} from "./pages/game-page/components/problem/problem.component";
 import {SubmitComponent} from "./pages/game-page/components/submit/submit.component";
-import {MySubmissionComponent} from "./pages/game-page/components/my-submission/my-submission.component";
+import {MyBotsComponent} from "./pages/game-page/components/my-bots/my-bots.component";
 import {StandingsComponent} from "./pages/game-page/components/standings/standings.component";
 
 const routes: Routes = [
@@ -20,13 +20,13 @@ const routes: Routes = [
       {path: 'help', component: HelpComponent}
     ]
   },
-
+  
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'game/:id', component: GamePageComponent,children:[
       {path: 'problem', component: ProblemComponent},
       {path: 'submit', component: SubmitComponent},
-      {path: 'my-submission', component: MySubmissionComponent},
+      {path: 'my-submission', component: MyBotsComponent},
       {path: 'standings', component: StandingsComponent}
     ]}
 ];

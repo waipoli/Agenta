@@ -20,10 +20,11 @@ import {NewComponent} from "./pages/main-page/components/news/new/new.component"
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { ProblemComponent } from './pages/game-page/components/problem/problem.component';
 import { SubmitComponent } from './pages/game-page/components/submit/submit.component';
-import { MySubmissionComponent } from './pages/game-page/components/my-submission/my-submission.component';
+import { MyBotsComponent } from './pages/game-page/components/my-bots/my-bots.component';
 import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { BotComponent } from './pages/game-page/components/my-bots/bot/bot/bot.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,9 @@ import { FormsModule } from '@angular/forms';
     GamePageComponent,
     ProblemComponent,
     SubmitComponent,
-    MySubmissionComponent,
-    StandingsComponent
+    MyBotsComponent,
+    StandingsComponent,
+    BotComponent
   ],
   imports: [
     BrowserModule,
