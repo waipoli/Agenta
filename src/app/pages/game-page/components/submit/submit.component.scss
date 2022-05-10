@@ -1,172 +1,176 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 
 .block {
-    font-family: 'Space Grotesk';
-    width: 75%;
-    margin: auto;
-    margin-top: 4.5rem;
-    background-color: white;
-    border-radius: 10px;
-    padding-top: 1rem;
-    padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  font-family: 'Space Grotesk';
+  width: 75%;
+  margin: auto;
+  margin-top: 4.5rem;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .step {
-    border-style: solid;
-    border-width: 1px 0px 0px 0px;
-    border-color: black;
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: black;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
 }
 
 input[type='file'] {
-    display: none;
+  display: none;
 }
 
 .custom-file-upload {
-    font-family: 'Space Grotesk' !important;
-    margin-left: 0.8rem;
-    background-color: white;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
-    cursor: pointer;
-    transition: transform 0.1s;
+  font-family: 'Space Grotesk' !important;
+  margin-left: 0.8rem;
+  background-color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.1s;
 
-    &:hover {
-        background-color: #ffffff;
-        transform: scale(1.025);
-    }
+  &:hover {
+    background-color: #ffffff;
+    transform: scale(1.025);
+  }
 }
 
-h1 {
-    font-family: 'Space Grotesk' !important;
-    color: black;
-    font-size: 4.5rem !important;
-    font-weight: bold !important;
-    text-align: center;
-    width: 100%;
-    margin-top: 2rem !important;
-    margin-bottom: 2.5rem !important;
+#intro {
+  font-family: 'Space Grotesk' !important;
+  color: black;
+  font-size: 4.5rem !important;
+  font-weight: bold !important;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem !important;
+  margin-bottom: 2.5rem !important;
 }
 
 h2 {
-    font-family: 'Space Grotesk' !important;
-    color: black !important;
-    font-size: 2.5rem !important;
-    font-weight: bolder !important;
+  font-family: 'Space Grotesk' !important;
+  color: black !important;
+  font-size: 2.5rem !important;
+  font-weight: bolder !important;
 }
 
 #upload-icon {
-    margin: auto;
-    // width: 3.5rem;
-    // height: 3.5rem;
-    width: 60%;
-    height: 60%;
+  margin: auto;
+  // width: 3.5rem;
+  // height: 3.5rem;
+  width: 60%;
+  height: 60%;
 }
 
 #upload-row {
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
 
 #file-selected {
-    font-family: 'Space Grotesk' !important;
-    font-weight: 600;
-    font-size: 1.6rem;
-    margin-left: 0.2rem;
+  font-family: 'Space Grotesk' !important;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-left: 0.2rem;
 }
 
 #label-language {
-    font-family: 'Space Grotesk' !important;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-left: 1rem;
+  font-family: 'Space Grotesk' !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1rem;
 }
 
 #select-language {
-    font-family: 'Space Grotesk' !important;
-    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    padding-right: 8rem;
-    padding-left: 0.8rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border: solid;
-    border-width: 0px;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    color: black;
-    cursor: pointer;
-    background-color: white;
+  font-family: 'Space Grotesk' !important;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding-right: 8rem;
+  padding-left: 0.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+
 }
 
 #bot-name-input {
-    font-family: 'Space Grotesk' !important;
-    border-style: solid;
-    border-width: 0px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
-    padding: 1rem 1rem;
-    margin-left: 1rem;
-    font-size: 1.5rem;
+  font-family: 'Space Grotesk' !important;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.15);
+  padding: 1rem 1rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
 
-    &:active {
-        border: none;
-    }
+  &:focus {
+    border: none;
+  }
+
+  &:active {
+    border: none;
+  }
 }
 
 #label-name {
-    font-family: 'Space Grotesk' !important;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+  font-family: 'Space Grotesk' !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 #bot-name-input {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 #submit-button {
-    background-color: #FFCF59;
-    border: solid 0px;
-    border-radius: 5px;
-    flex: 0 0;
-    padding: 1rem 6rem;
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.1s;
+  background-color: #FFCF59;
+  border: solid 0px;
+  border-radius: 5px;
+  flex: 0 0;
+  padding: 1rem 6rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s;
 
-    &:hover {
-        background-color: #ffca44;
-        transform: scale(1.01);
-    }
+  &:hover {
+    background-color: #ffca44;
+    transform: scale(1.01);
+  }
 
-    &:active {
-        transition: transform 0s;
-        background-color: #ffc125;
-        transform: scale(1.00);
-    }
+  &:active {
+    transition: transform 0s;
+    background-color: #ffc125;
+    transform: scale(1.00);
+  }
 
-    box-shadow: 0px 0px 10px 2px rgb(255, 193, 36, 0.2)
+  box-shadow: 0px 0px 10px 2px rgb(255, 193, 36, 0.2)
 }

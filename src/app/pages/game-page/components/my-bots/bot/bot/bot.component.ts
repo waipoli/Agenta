@@ -9,7 +9,7 @@ export class BotComponent implements OnInit {
   name = 'ElMishucha';
   language = 'C++';
   date = '3 days ago';
-  
+
   constructor() { }
 
   ngOnInit(): void {
