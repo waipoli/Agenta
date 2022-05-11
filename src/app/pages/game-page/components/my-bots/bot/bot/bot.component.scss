@@ -23,3 +23,34 @@ span {
 #date {
   width: 20%;
 }
+
+.edit-buttons {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+#edit {
+  transform: scale(1.5,1.5);
+  cursor: pointer;
+  transition: color 0.08s;
+
+  &:hover {
+    color: #45DCCA;
+  }
+}
+
+#delete {
+  //width: %;
+  transform: scale(1.5,1.5);
+
+  cursor: pointer;
+  transition: color 0.08s;
+
+  &:hover {
+    color: #FF6767;
+  }
+  margin-left: 5rem;
+}
