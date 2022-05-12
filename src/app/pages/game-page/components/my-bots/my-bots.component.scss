@@ -7,17 +7,12 @@ body {
   flex-direction: column !important;
 }
 
-
-
-
 #bots {
-  padding-top: 2.5rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   width: 70%;
-  margin-top: 1rem;
 }
 
 span {
@@ -27,10 +22,10 @@ span {
 }
 
 .tags {
-  padding: 2rem 8rem;
+  padding: 0rem 8rem;
   //background-color: white;
   border-radius: 20px;
   display: flex;
-  margin-bottom: -1.98rem;
+  //margin-bottom: -1.98rem;
 }
 

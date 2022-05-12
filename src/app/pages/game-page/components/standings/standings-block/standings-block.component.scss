@@ -1,0 +1,45 @@
+#block {
+    background-color: white;
+    border-radius: 10px;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Space Grotesk';
+}
+
+#number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 4rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    // font-family: 'Space Grotesk';
+    font-size: 2rem;
+
+    background-color: #ffffff;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: #c7c7c753;
+
+    &.gold {
+        background-color: #FFE55B;
+    }
+    &.silver {
+        background-color: #dedede;
+    }
+    &.bronze {
+        background-color: #DC9D54;
+    }
+}
+
+#name {
+    font-size: 2rem;
+    margin-left: 1rem;
+}

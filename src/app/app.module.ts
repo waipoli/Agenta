@@ -25,6 +25,7 @@ import { StandingsComponent } from './pages/game-page/components/standings/stand
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { BotComponent } from './pages/game-page/components/my-bots/bot/bot/bot.component';
+import { StandingsBlockComponent } from './pages/game-page/components/standings/standings-block/standings-block.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { BotComponent } from './pages/game-page/components/my-bots/bot/bot/bot.c
     SubmitComponent,
     MyBotsComponent,
     StandingsComponent,
-    BotComponent
+    BotComponent,
+    StandingsBlockComponent
   ],
   imports: [
     BrowserModule,
