@@ -13,7 +13,7 @@
 }
 
 .text {
-  margin-left: 5rem;
+  margin-right: 3rem;
   display: flex;
   font-family: 'Space Grotesk';
   font-style: normal;
@@ -22,9 +22,12 @@
 
   color: #FF9292;
   transition: transform 0.1s;
-
-  &:hover {
-    transform: scale(1.03, 1.03);
-  }
 }
 
+#danger {
+  color:#FF9292;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
