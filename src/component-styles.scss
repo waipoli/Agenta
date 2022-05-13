@@ -110,6 +110,8 @@
     color: $yellow;
   }
 
+  transition: border-bottom-width 0.35s;
+
   &.selected {
     color: $yellow;
     font-weight: 600;
@@ -132,13 +134,21 @@
   align-content: center;
   align-items: center;
   width: 98%;
-  height: 98%;
+  //height: 98%;
   flex-direction: column;
 }
 
 
 .account {
   margin-right: 6rem;
+  transition: transform 0.1s;
+  &:hover{
+    transform: scale(1.1,1.1);
+  }
+
+  &.selected{
+    transform: scale(1.1,1.1);
+  }
 }
 
 #right-part {
@@ -147,9 +157,6 @@
   justify-content: flex-end;
 }
 
-.account {
-  margin-right: 6rem;
-}
 
 .right-part {
   flex: 1 1;
@@ -158,7 +165,7 @@
 }
 
 .Header {
-  width: 97%;
+  //display: flex;
   text-align: center !important;
 }
 
@@ -176,7 +183,6 @@
   font-size: 1.2rem !important;
   line-height: 1.5rem !important;
 }
-
 .top-panel {
   display: flex;
   flex-direction: row;

@@ -24,8 +24,10 @@ import { MyBotsComponent } from './pages/game-page/components/my-bots/my-bots.co
 import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { BotComponent } from './pages/game-page/components/my-bots/bot/bot/bot.component';
+import { BotComponent } from './pages/game-page/components/my-bots/bot/bot.component';
 import { StandingsBlockComponent } from './pages/game-page/components/standings/standings-block/standings-block.component';
+import { AccountComponent } from './pages/main-page/components/account/account.component';
+import { DataComponent } from './pages/main-page/components/account/components/data/data.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { StandingsBlockComponent } from './pages/game-page/components/standings/
     MyBotsComponent,
     StandingsComponent,
     BotComponent,
-    StandingsBlockComponent
+    StandingsBlockComponent,
+    AccountComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,

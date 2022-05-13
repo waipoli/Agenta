@@ -1,0 +1,30 @@
+
+.data-input {
+  margin: 1rem 0 0 1rem;
+  display: flex;
+  width: 400%;
+  //height: 25rem;
+  //justify-content: left;
+  flex-direction: column !important;
+  background-color: #45DCCA;
+
+}
+
+.data-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #585858;
+  //border-bottom: 2px solid #000000;
+}
+
+.underline {
+  width: 100%;
+  //width: 18rem;
+  height: 0px;
+
+}

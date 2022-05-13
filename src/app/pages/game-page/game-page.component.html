@@ -13,7 +13,8 @@
   </div>
   <span class="text">Chess Game ends in 3:10:15:2</span>
   <div class="right-part">
-    <img class="account" src="assets/images/account.svg">
+    <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
+         routerLink="/account">
   </div>
 </div>
 <router-outlet></router-outlet>

@@ -11,16 +11,18 @@ import {ProblemComponent} from "./pages/game-page/components/problem/problem.com
 import {SubmitComponent} from "./pages/game-page/components/submit/submit.component";
 import {MyBotsComponent} from "./pages/game-page/components/my-bots/my-bots.component";
 import {StandingsComponent} from "./pages/game-page/components/standings/standings.component";
+import {AccountComponent} from "./pages/main-page/components/account/account.component";
 
 const routes: Routes = [
   {
     path: '', component: MainPageComponent, children: [
       {path: 'news/:id', component: NewsComponent},
       {path: 'games', component: GamesComponent},
-      {path: 'help', component: HelpComponent}
+      {path: 'help', component: HelpComponent},
+      {path: 'account', component: AccountComponent}
     ]
   },
-  
+
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'game/:id', component: GamePageComponent,children:[
