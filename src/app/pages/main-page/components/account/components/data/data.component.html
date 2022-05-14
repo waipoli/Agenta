@@ -1,8 +1,19 @@
-<div class="data-input">
-  <div class="data-text">{{text}}</div>
-  <div class="data-text">{{text}}</div>
-  <div class="data-text">{{text}}</div>
-  <div class="data-text">{{text}}</div>
-  <div class="data-text">{{text}}</div>
-  <div class="data-text">{{text}}</div>
+<div class="data-text">
+  <ng-container *ngIf="isEdit">
+    <input [(ngModel)]="text" placeholder="{{getText()}}" class="text italic">
+  </ng-container>
+  <ng-container *ngIf="!isEdit">
+    <div [class.none]="text == null || text==''" class="text"> {{getText()}}</div>
+  </ng-container>
+  <div class="pen-container">
+    <ng-container *ngIf="!isEdit">
+      <i class="fa-solid fa-pen pen" (click)="isEdit=!isEdit"></i>
+    </ng-container>
+
+    <ng-container *ngIf="isEdit">
+
+      <i class="fa-solid fa-check pen" (click)="isEdit=!isEdit"></i>
+    </ng-container>
+  </div>
 </div>
+

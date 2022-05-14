@@ -1,18 +1,67 @@
-
-.data-input {
-  background-color: #45DCCA;
-  flex: 1 1 100%;
-  height: 100%;
-}
+@import "src/main-styles";
 
 .data-text {
+  width: 90%;
+  //background-color: #45DCCA;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
   display: flex;
-  flex-direction: column;
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 20px;
   color: #585858;
-  //border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+.text {
+  align-items: center;
+  display: flex;
+  flex: 1 1 100%;
+  //background-col/**/or: #45DCCA;
+  height: 2rem;
+  line-height: 20px;
+  width: 40% !important;
+  color: black;
+  font-size: 20px;
+  border-width: 0;
+  font-family: 'Space Grotesk';
+  margin: 0 0 0 0;
+  &.none {
+    color: #585858 !important;
+  }
+  //background-color: #45DCCA;
+  padding: 0 0 0 0;
+  font-weight: 300;
+  &:focus {
+    outline-width: 0;
+    border-width: 0;
+    border-color: transparent;
+  }
+  &.italic{
+    font-style: italic;
+
+  }
+}
+
+
+::placeholder{
+  color: #585858 !important;
+  font-style: italic;
+}
+.pen-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+.pen {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    color: #58A6FF;
+  }
 }
