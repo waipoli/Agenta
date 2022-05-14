@@ -2,9 +2,8 @@
   <h1 class="header-text">Current Games</h1>
 </div>
 <div id="games">
-  <!-- <div *ngFor="let image of images"> -->
-  <!-- </div> -->
-  <app-game name="Chess" path="./assets/images/chess.jpg" id="{{1978}}"></app-game>
-  <app-game name="TicTacToe" path="./assets/images/tictactoe.jpg" id="{{1979}}"></app-game>
-  <app-game name="Gayshit Infarct" path="./assets/images/gi.png" id="{{1980}}"></app-game>
+  <div *ngFor="let game of games">
+    <app-game name="{{game.name}}" path="{{game.imageUrl}}" id="{{game.id}}"></app-game>
+  </div>
+
 </div>
