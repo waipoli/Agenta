@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 export class GameComponent implements OnInit {
   @Input() path?: string;
   @Input() id?: string;
-
+  @Input() name?: string;
   constructor(private _router: Router) {
   }
 
@@ -18,6 +18,6 @@ export class GameComponent implements OnInit {
   }
 
   goto(path: string): void {
-    this._router.navigate([path + this.id]);
+    this._router.navigate([path + this.id + '/problem']);
   }
 }

@@ -15,12 +15,12 @@
   border-radius: 10px;
   margin: 1rem auto 4rem;
   transition: transform 0.06s, height 0.7s, box-shadow 0.06s;
-  box-shadow: 4px 2px 20px 0px rgb(0, 0, 0, .4);
+  box-shadow: 2px 2px 10px 1px rgb(0, 0, 0, .2);
   overflow-y: hidden;
 
   &:hover {
-    box-shadow: 4px 2px 30px 1px rgb(0, 0, 0, .4);
-    transform: scale(1.01);
+    box-shadow: 2px 2px 20px 1px rgb(0, 0, 0, .3);
+    transform: scale(1.005);
   }
 
   &.open {

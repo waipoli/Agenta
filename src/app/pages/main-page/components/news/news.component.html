@@ -8,7 +8,7 @@
   <div class="switch">
     <div *ngFor="let i of counter(data.length)">
       <button [class.selected]="isThis(i)" [class.able]="isAble(i)" [class.disable]="!isAble(i)" class="switch-button"
-              [innerHTML]="getName(i)" routerLink="/news/{{switch_tabs(i)}}"></button>
+              [innerHTML]="getName(i)" routerLink="/news/{{switch_tabs(i)}}" (click)="scrollTop($event)"></button>
     </div>
   </div>
 </div>

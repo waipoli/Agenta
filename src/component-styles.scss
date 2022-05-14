@@ -110,7 +110,7 @@
     color: $yellow;
   }
 
-  transition: border-bottom-width 0.35s;
+  transition: border-bottom-width 0.1s;
 
   &.selected {
     color: $yellow;
@@ -190,4 +190,6 @@
   height: 5rem;
   background-color: white;
   align-items: center;
+  border: 0px solid #D1D1D1;
+  border-bottom-width: 1px;
 }

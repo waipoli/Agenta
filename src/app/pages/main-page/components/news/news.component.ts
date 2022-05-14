@@ -157,4 +157,12 @@ export class NewsComponent implements OnInit {
     console.log(this.data[id], this.pageId - 1 + 1 + 1)
     return this.data[id] == (this.pageId - 1 + 1 + 1).toString();
   }
+
+  scrollTop(event: any) {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
 }
