@@ -23,7 +23,7 @@ import { SubmitComponent } from './pages/game-page/components/submit/submit.comp
 import { MyBotsComponent } from './pages/game-page/components/my-bots/my-bots.component';
 import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BotComponent } from './pages/game-page/components/my-bots/bot/bot.component';
 import { StandingsBlockComponent } from './pages/game-page/components/standings/standings-block/standings-block.component';
 import { AccountComponent } from './pages/main-page/components/account/account.component';
@@ -57,6 +57,7 @@ import { DataComponent } from './pages/main-page/components/account/components/d
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule
