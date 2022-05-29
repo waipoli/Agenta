@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MonoTypeOperatorFunction, Observable } from 'rxjs';
 import { BotFormService } from './bot-form.service';
-
+import {GlobalConstants} from "../../global-constants";
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +13,7 @@ export class BotService {
 
   constructor(private http: HttpClient, private botFormService: BotFormService) { }
 
-  saveBotUrl = "https://localhost:5001/bots/upsert"
+  saveBotUrl = GlobalConstants.serverUrl+"bots/upsert"
 
   upsertBot(): Observable<number> {
     return this.http.put<number>(this.saveBotUrl, this.botFormService.getBotFromForm());
