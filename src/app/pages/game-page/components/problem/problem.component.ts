@@ -24,6 +24,7 @@ export class SafeHtmlPipe implements PipeTransform {
 })
 export class ProblemComponent implements OnInit {
   content = "";
+  title = "";
 
   constructor(private gamesService: GamesService, private router: Router) {
 
@@ -34,7 +35,10 @@ export class ProblemComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.router.url.split("/")[2];
 
-    this.gamesService.getGame(this.id).subscribe((game: Game) => this.content = game.htmlContent);
+    this.gamesService.getGame(this.id).subscribe((game: Game) => {
+      this.content = game.htmlContent;
+      this.title = game.name;
+    });
     // let g:GamesService = new GamesService()
     // g.getGame(this.id);
     // GamesService
