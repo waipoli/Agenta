@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {GlobalConstants} from "../../global-constants";
 import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Game} from "../../core/models/game";
 
 @Component({
   selector: 'app-game-page',
@@ -9,6 +10,7 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 })
 export class GamePageComponent implements OnInit {
   title = GlobalConstants.title;
+  @Input("Game") game?: Game;
 
   constructor(private router: Router, private _route: ActivatedRoute) {
   }
@@ -23,6 +25,7 @@ export class GamePageComponent implements OnInit {
       }
     )
   }
+
 
   isButtonSelected(buttonName: string): boolean {
     return buttonName === this.router.url.replace('/game/' + this.taskId + '/', '');

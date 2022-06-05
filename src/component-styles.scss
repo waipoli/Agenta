@@ -133,7 +133,7 @@
   position: center;
   align-content: center;
   align-items: center;
-  width: 98%;
+  width: 58%;
   //height: 98%;
   flex-direction: column;
 }
@@ -180,6 +180,15 @@
 }
 
 .content-text {
+  display: flex;
+  text-align: center;
+
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-content: center;
+
   height: 99%;
   font-size: 1.2rem !important;
   line-height: 1.5rem !important;

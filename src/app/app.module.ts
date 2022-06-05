@@ -18,7 +18,7 @@ import { HelpComponent } from './pages/main-page/components/help/help.component'
 import { TopPanelComponent } from './pages/main-page/components/top-panel/top-panel.component';
 import {NewComponent} from "./pages/main-page/components/news/new/new.component";
 import { GamePageComponent } from './pages/game-page/game-page.component';
-import { ProblemComponent } from './pages/game-page/components/problem/problem.component';
+import {ProblemComponent, SafeHtmlPipe} from './pages/game-page/components/problem/problem.component';
 import { SubmitComponent } from './pages/game-page/components/submit/submit.component';
 import { MyBotsComponent } from './pages/game-page/components/my-bots/my-bots.component';
 import { StandingsComponent } from './pages/game-page/components/standings/standings.component';
@@ -30,27 +30,28 @@ import { AccountComponent } from './pages/main-page/components/account/account.c
 import { DataComponent } from './pages/main-page/components/account/components/data/data.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    MainPageComponent,
-    GamesComponent,
-    GameComponent,
-    NewsComponent,
-    HelpComponent,
-    TopPanelComponent,
-    NewComponent,
-    GamePageComponent,
-    ProblemComponent,
-    SubmitComponent,
-    MyBotsComponent,
-    StandingsComponent,
-    BotComponent,
-    StandingsBlockComponent,
-    AccountComponent,
-    DataComponent,
-  ],
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent,
+        MainPageComponent,
+        GamesComponent,
+        GameComponent,
+        NewsComponent,
+        HelpComponent,
+        TopPanelComponent,
+        NewComponent,
+        GamePageComponent,
+        ProblemComponent,
+        SubmitComponent,
+        MyBotsComponent,
+        StandingsComponent,
+        BotComponent,
+        StandingsBlockComponent,
+        AccountComponent,
+        DataComponent,
+        SafeHtmlPipe,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

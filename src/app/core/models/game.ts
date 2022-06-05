@@ -2,7 +2,7 @@ export interface Game {
   id: number;
   name: string;
   previewImageId: number;
-  htmlContentId: number;
+  htmlContent: string;
   endDate: Date;
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Params} from "@angular/router";
 
 
 @Component({
@@ -12,5 +13,6 @@ export class MainPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 }

@@ -20,7 +20,6 @@ export class GameComponent implements OnInit {
   }
 
   getPath(): string {
-    console.log(GlobalConstants.serverUrl+"image/"+this.imageId)
     return GlobalConstants.serverUrl+"image/"+this.imageId;
   }
 
