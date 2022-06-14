@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 
 import {DomSanitizer} from '@angular/platform-browser';
 import {PipeTransform, Pipe} from '@angular/core';
@@ -23,25 +23,28 @@ export class SafeHtmlPipe implements PipeTransform {
   encapsulation: ViewEncapsulation.None
 })
 export class ProblemComponent implements OnInit {
-  content = "";
-  title = "";
+  game: Game = {
+    endDate: new Date(),
+    htmlContent: "",
+    id: 0,
+    name: "",
+    previewImageId: 0
+  }
 
-  constructor(private gamesService: GamesService, private router: Router) {
+  constructor() {
 
   }
 
-  id: string = ""
 
   ngOnInit(): void {
-    this.id = this.router.url.split("/")[2];
 
-    this.gamesService.getGame(this.id).subscribe((game: Game) => {
-      this.content = game.htmlContent;
-      this.title = game.name;
-    });
-    // let g:GamesService = new GamesService()
-    // g.getGame(this.id);
-    // GamesService
+
+    setInterval(() => {
+      var game = localStorage.getItem('game');
+      if (game != null)
+        this.game = JSON.parse(game);
+    }, 10)
+
   }
 
 }

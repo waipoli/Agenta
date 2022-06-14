@@ -4,5 +4,4 @@ export interface Game {
   previewImageId: number;
   htmlContent: string;
   endDate: Date;
-
 }

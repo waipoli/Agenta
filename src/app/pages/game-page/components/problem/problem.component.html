@@ -1,9 +1,9 @@
 <div class="Header">
-  <h1 class="header-text">{{title}} Statement</h1>
+  <h1 class="header-text">{{game.name}} Statement</h1>
 </div>
 
 <div class="container">
-  <div id="header">{{title}} Game</div>
-  <div class="content" [innerHTML] = "content | safeHtml">
+  <div id="header">{{game.name}} Game</div>
+  <div class="content" [innerHTML]="game.htmlContent | safeHtml">
   </div>
 </div>
