@@ -37,8 +37,6 @@ export class ProblemComponent implements OnInit {
 
 
   ngOnInit(): void {
-
-
     setInterval(() => {
       var game = localStorage.getItem('game');
       if (game != null)

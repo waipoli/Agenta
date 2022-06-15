@@ -11,7 +11,13 @@ import {GamesService} from "../../core/services/games.service";
 })
 export class GamePageComponent implements OnInit {
   title = GlobalConstants.title;
-  game?: Game;
+  game: Game = {
+    endDate: new Date(),
+    htmlContent: "",
+    id: 0,
+    name: "",
+    previewImageId: 0
+  };
 
   constructor(private gamesService: GamesService, private router: Router, private _route: ActivatedRoute) {
   }
@@ -31,6 +37,7 @@ export class GamePageComponent implements OnInit {
     this.gamesService.getGame(this.id).subscribe((game: Game) => {
       this.game = game;
       this.game.endDate = new Date(game.endDate);
+      this.updateTime();
       localStorage.setItem("game", JSON.stringify(this.game));
 
     });
@@ -48,6 +55,7 @@ export class GamePageComponent implements OnInit {
     if (this.game != null) {
       var time: number = this.game.endDate.getTime() - Date.now();
       time /= 1000;
+
       time = Math.round(time);
       var D = Math.floor(time / (3600 * 24));
       var H = Math.floor(time % (3600 * 24) / 3600);
@@ -58,7 +66,11 @@ export class GamePageComponent implements OnInit {
       M = Math.round(M)
       S = Math.round(S)
       console.log(D, H, M, S)
-      this.leftTime = D + ':' + (Math.floor(H / 10)).toString() + (H % 10).toString() + ':' + (Math.floor(M / 10)).toString() + (M % 10).toString() + ':' + (Math.floor(S / 10)).toString() + (S % 10).toString();
+
+      this.leftTime = " Game ends in " + D + ':' + (Math.floor(H / 10)).toString() + (H % 10).toString() + ':' + (Math.floor(M / 10)).toString() + (M % 10).toString() + ':' + (Math.floor(S / 10)).toString() + (S % 10).toString();
+      if (time < 0) {
+        this.leftTime = " Game is over";
+      }
     }
   }
 
