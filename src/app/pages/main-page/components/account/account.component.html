@@ -5,11 +5,11 @@
 <div class="container">
   <img class="account-image" src="https://localhost:5001/image/4">
   <div id="inputs">
-    <app-data [defaultText]="'Name'"></app-data>
-    <app-data [defaultText]="'Username'" [text]="'zelen1978'"></app-data>
-    <app-data [defaultText]="'Birthday day'"></app-data>
-    <app-data [defaultText]="'Country'"></app-data>
-    <app-data [defaultText]="'Description'"></app-data>
+    <app-data [defaultText]="'Name'" [text]="user.name"></app-data>
+    <app-data [defaultText]="'Username'" [text]="user.username"></app-data>
+    <app-data [defaultText]="'Birthday day'" [text]="user.birthdayDay.toString()"></app-data>
+    <app-data [defaultText]="'Country'" [text]="user.country"></app-data>
+    <app-data [defaultText]="'Description'" [text]="user.details"></app-data>
   </div>
 </div>
 

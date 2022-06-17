@@ -7,6 +7,7 @@
     <button [class.selected]="isButtonSelected('help')" class="tab-button" routerLink="help">Help</button>
   </div>
   <div class="right-part">
+    <span id="username">{{user.username}}</span>
     <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
          routerLink="account">
   </div>

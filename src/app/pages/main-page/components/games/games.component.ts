@@ -25,7 +25,6 @@ export class GamesComponent implements OnInit {
       .pipe(tap(g => console.log(g)))
       .subscribe((data: Game[]) => {
         this.games = data;
-        // localStorage.setItem("games", JSON.stringify(this.games));
       });
   }
 

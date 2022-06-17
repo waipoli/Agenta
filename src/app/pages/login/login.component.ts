@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {HttpResponse} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {GlobalConstants} from "../../global-constants";
+import {GamesService} from "../../core/services/games.service";
+import {LoginService} from "../../core/services/login.service";
+import {UserService} from "../../core/services/user.service";
+import {User} from "../../core/models/user";
 
 // import * as Console from "console";
 
@@ -13,7 +17,7 @@ import {GlobalConstants} from "../../global-constants";
 export class LoginComponent implements OnInit {
   title: String = GlobalConstants.title;
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, private loginService: LoginService, private userService: UserService) {
   }
 
 
@@ -21,22 +25,17 @@ export class LoginComponent implements OnInit {
 
   }
 
-  clicked() {
-    console.log("bob")
-  }
-
-  try_sign_in(name: string, password: string) {
-    // this._api.login(name, password).subscribe((res: HttpResponse<any>) => {
-    //   localStorage.setItem("isLogin", res.body.login);
-    //   if (localStorage.getItem("isLogin") == "1") {
-    //     localStorage.setItem("name", name);
-    //     console.log("Log In");
-    //     this._router.navigate(["/main-page"]);
-    //   } else {
-    //     localStorage.removeItem("name");
-    //     localStorage.setItem("isLogin", "1");
-    //     console.log("Doesnt Match");
-    //   }
-    // })
+  login(username: string, password: string) {
+    this.loginService.login({
+      username: username,
+      password: password
+    });
+    if (sessionStorage.getItem("token") != null) {
+      this.userService.getUser().subscribe((user: User) => {
+        if (user != null)
+          sessionStorage.setItem("User",JSON.stringify(user))
+      })
+    }
   }
 }
+

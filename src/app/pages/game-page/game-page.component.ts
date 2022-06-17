@@ -38,7 +38,7 @@ export class GamePageComponent implements OnInit {
       this.game = game;
       this.game.endDate = new Date(game.endDate);
       this.updateTime();
-      localStorage.setItem("game", JSON.stringify(this.game));
+      sessionStorage.setItem("game", JSON.stringify(this.game));
 
     });
     this.updateTime();
@@ -65,7 +65,7 @@ export class GamePageComponent implements OnInit {
       H = Math.round(H)
       M = Math.round(M)
       S = Math.round(S)
-      console.log(D, H, M, S)
+      // console.log(D, H, M, S)
 
       this.leftTime = " Game ends in " + D + ':' + (Math.floor(H / 10)).toString() + (H % 10).toString() + ':' + (Math.floor(M / 10)).toString() + (M % 10).toString() + ':' + (Math.floor(S / 10)).toString() + (S % 10).toString();
       if (time < 0) {
@@ -74,11 +74,7 @@ export class GamePageComponent implements OnInit {
     }
   }
 
-  isButtonSelected(buttonName
-                     :
-                     string
-  ):
-    boolean {
+  isButtonSelected(buttonName: string): boolean {
     return buttonName === this.router.url.replace('/game/' + this.id + '/', '');
   }
 }

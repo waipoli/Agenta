@@ -7,11 +7,11 @@
   <div class="login-content">
     <label class="info-text">Username</label>
     <input class="text-field" #nameInput>
-    
+
     <label class="info-text">Password</label>
     <input type="password" class="text-field" id="password" #pwdInput>
-    
-    <button class="apply-button" id="login-button" (click)="try_sign_in(nameInput.value,pwdInput.value)">Sign
+
+    <button class="apply-button" id="login-button" (click)="login(nameInput.value,pwdInput.value)">Sign
       in</button>
   </div>
 

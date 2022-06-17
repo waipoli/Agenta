@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { GlobalConstants } from 'src/app/global-constants';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {GlobalConstants} from 'src/app/global-constants';
+import {User} from "../../../../core/models/user";
+
 @Component({
   selector: 'app-top-panel',
   templateUrl: './top-panel.component.html',
@@ -8,12 +10,27 @@ import { GlobalConstants } from 'src/app/global-constants';
 })
 export class TopPanelComponent implements OnInit {
   title = GlobalConstants.title;
+  user: User = {
+    id: 0,
+    name: "",
+    username: "",
+    email:"",
+    birthdayDay: new Date(),
+    country: "",
+    details: ""
+  }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
+    let t: string | null = sessionStorage.getItem("User");
+    if (t != null) {
+      this.user = JSON.parse(t);
+    }
   }
 
   isButtonSelected(buttonName: string): boolean {
-    return buttonName === this.router.url.replace('/', '').split('/')[0];  }
+    return buttonName === this.router.url.replace('/', '').split('/')[0];
+  }
 }

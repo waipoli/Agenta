@@ -14,10 +14,20 @@ export class GamesService {
   }
 
   getGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.gamesListUrl);
+    let auth_token = sessionStorage.getItem('token')
+    return this.http.get<Game[]>(this.gamesListUrl, {
+      headers: {
+        'Authorization': `Bearer ${auth_token}`
+      }
+    });
   }
 
   getGame(id: string): Observable<Game> {
-    return this.http.get<Game>(this.gamesListUrl + '/' + id);
+    let auth_token = sessionStorage.getItem('token')
+    return this.http.get<Game>(this.gamesListUrl + '/' + id, {
+      headers: {
+        'Authorization': `Bearer ${auth_token}`
+      }
+    });
   }
 }

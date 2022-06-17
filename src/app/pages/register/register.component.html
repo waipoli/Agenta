@@ -8,7 +8,15 @@
     <div class="info-text">
       <p>Username</p>
     </div>
+
     <input class="text-field" #nameInput>
+
+
+    <div class="info-text">
+      <p>E-mail</p>
+    </div>
+    <input class="text-field" id="email" #emailInput>
+
     <div class="info-text">
       <p>Password</p>
     </div>
@@ -17,6 +25,8 @@
       <p>Repeat Password</p>
     </div>
     <input type="password" class="text-field" id="repeat-password" #password2Input>
+
+
     <button class="apply-button" id="register-button" (click)="register(nameInput.value,password1Input.value,password2Input.value)">Register
     </button>
   </div>

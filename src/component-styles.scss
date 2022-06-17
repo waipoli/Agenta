@@ -48,7 +48,7 @@
   transition: all 0.15s ease 0s;
 
   &:focus {
-    outline-width: 0px;
+    outline: none;
     border-width: 3px;
     border-color: $yellow;
   }
@@ -142,12 +142,15 @@
 .account {
   margin-right: 6rem;
   transition: transform 0.1s;
-  &:hover{
-    transform: scale(1.1,1.1);
+
+  &:hover {
+    transform: scale(1.1, 1.1);
   }
+
   cursor: pointer;
-  &.selected{
-    transform: scale(1.1,1.1);
+
+  &.selected {
+    transform: scale(1.1, 1.1);
   }
 }
 
@@ -193,6 +196,7 @@
   font-size: 1.2rem !important;
   line-height: 1.5rem !important;
 }
+
 .top-panel {
   display: flex;
   flex-direction: row;
