@@ -1,8 +1,11 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {A} from "@angular/cdk/keycodes";
-import {GlobalConstants} from "../../../../global-constants";
-import {min} from "rxjs";
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import { A } from "@angular/cdk/keycodes";
+import { GlobalConstants } from "../../../../global-constants";
+import { min } from "rxjs";
+import { New } from 'src/app/core/models/new';
+import { NewsService } from 'src/app/core/services/news.service';
+import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-news',
@@ -14,17 +17,19 @@ export class NewsComponent implements OnInit {
   ables: Array<boolean> = Array<boolean>(0);
   data: Array<string> = Array<string>(0);
   pageId = 0;
+  news: New[] = [];
 
-  constructor(private router: Router, private _route: ActivatedRoute) {
+  constructor(private router: Router, private newsService: NewsService, private _route: ActivatedRoute) {
 
   }
 
   createNewsList() {
-    this.countOfNews = Math.min(GlobalConstants.newsCount - GlobalConstants.countOfNewsPerPage * this.pageId, GlobalConstants.countOfNewsPerPage);
+    this.countOfNews = this.news.length;
+    console.log(this.countOfNews)
   }
 
   createSwitcher() {
-    let pagesCount = (GlobalConstants.newsCount + GlobalConstants.countOfNewsPerPage - 1) / (GlobalConstants.countOfNewsPerPage);
+    let pagesCount = (this.countOfNews + GlobalConstants.countOfNewsPerPage - 1) / (GlobalConstants.countOfNewsPerPage);
     pagesCount = Math.floor(pagesCount);
     if (pagesCount == 1) {
       return
@@ -132,7 +137,7 @@ export class NewsComponent implements OnInit {
     return range;
   }
 
-  ngOnInit(): void {
+  f(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -142,19 +147,28 @@ export class NewsComponent implements OnInit {
         this.pageId = params.id;
       }
     )
-    let pagesCount = (GlobalConstants.newsCount + GlobalConstants.countOfNewsPerPage - 1) / (GlobalConstants.countOfNewsPerPage);
+    let pagesCount = (this.countOfNews + GlobalConstants.countOfNewsPerPage - 1) / (GlobalConstants.countOfNewsPerPage);
     pagesCount = Math.floor(pagesCount);
-
-    console.log(pagesCount)
+    console.log(pagesCount);
     if (isNaN(this.pageId) || this.pageId < 0 || this.pageId >= pagesCount) {
-      this.router.navigate(["/"])
+      this.router.navigate(["/"]);
     }
-    this.createNewsList()
-    this.createSwitcher()
+    this.createNewsList();
+    this.createSwitcher();
+  }
+
+  ngOnInit(): void {
+    // get news
+    this.newsService.getNews()
+      .subscribe((data: New[]) => {
+        this.news = data;
+        // this.f();
+      });
+    // console.log(this.news);
   }
 
   isThis(id: number) {
-    console.log(this.data[id], this.pageId - 1 + 1 + 1)
+    // console.log(this.data[id], this.pageId - 1 + 1 + 1)
     return this.data[id] == (this.pageId - 1 + 1 + 1).toString();
   }
 

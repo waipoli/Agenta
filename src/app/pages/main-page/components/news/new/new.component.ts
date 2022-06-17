@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-new',
@@ -7,6 +8,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./new.component.scss']
 })
 export class NewComponent implements OnInit {
+
+  @Input() Title?: string;
+  @Input() Content?: string;
 
   constructor(private _router: Router) {
   }

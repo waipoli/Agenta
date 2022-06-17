@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
       this.userService.getUser().subscribe((user: User) => {
         if (user != null)
           sessionStorage.setItem("User",JSON.stringify(user))
-      })
+          this._router.navigate(["/"]);
+        })
     }
   }
 }

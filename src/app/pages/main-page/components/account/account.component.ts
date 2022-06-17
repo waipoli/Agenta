@@ -7,7 +7,7 @@ import {UserService} from "../../../../core/services/user.service";
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.scss']
+  styleUrls: ['./account.component.scss'] 
 })
 export class AccountComponent implements OnInit {
   user: User = {

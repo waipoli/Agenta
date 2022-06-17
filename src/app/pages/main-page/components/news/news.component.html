@@ -2,9 +2,12 @@
   <h1 class="header-text">News</h1>
 </div>
 <div class="news">
-  <div *ngFor="let i of counter(countOfNews)">
-    <app-new></app-new>
+  <div *ngFor="let i of news">
+    <app-new [Content]="i.content" [Title]="i.title" ></app-new>
   </div>
+
+
+
   <div class="switch">
     <div *ngFor="let i of counter(data.length)">
       <button [class.selected]="isThis(i)" [class.able]="isAble(i)" [class.disable]="!isAble(i)" class="switch-button"

@@ -11,7 +11,7 @@ import {User} from "../../../../core/models/user";
 export class TopPanelComponent implements OnInit {
   title = GlobalConstants.title;
   user: User = {
-    id: 0,
+    id: -1,
     name: "",
     username: "",
     email:"",

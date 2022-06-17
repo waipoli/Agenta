@@ -6,9 +6,17 @@
     <button [class.selected]="isButtonSelected('games')" class="tab-button" routerLink="games">Games</button>
     <button [class.selected]="isButtonSelected('help')" class="tab-button" routerLink="help">Help</button>
   </div>
-  <div class="right-part">
-    <span id="username">{{user.username}}</span>
-    <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
-         routerLink="account">
+  <div *ngIf="user.id != -1" class="right-part">
+      <span id="username">{{user.username}}</span>
+      <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
+        routerLink="account">
+  </div>
+  <div *ngIf="user.id == -1" class="right-part">
+    <a id="f" href="http://localhost:4200/register">Register</a>
+    <span id="or">or</span>
+    <a id="f" href="http://localhost:4200/login">Login</a>
+  </div>
+  <div>
+
   </div>
 </div>

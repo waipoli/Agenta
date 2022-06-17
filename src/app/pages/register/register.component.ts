@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
     if (this._registerService.register(user)) {
       console.log("Success!!!")
     } else {
-      console.log("Error")
+      console.log("Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     }
 
 
