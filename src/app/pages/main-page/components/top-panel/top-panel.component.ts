@@ -17,7 +17,8 @@ export class TopPanelComponent implements OnInit {
     email:"",
     birthdayDay: new Date(),
     country: "",
-    details: ""
+    details: "",
+    password:""
   }
 
   constructor(private router: Router) {

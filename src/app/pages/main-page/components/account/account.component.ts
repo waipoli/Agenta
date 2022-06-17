@@ -17,7 +17,8 @@ export class AccountComponent implements OnInit {
     email: "",
     birthdayDay: new Date(),
     country: "",
-    details: ""
+    details: "",
+    password: ""
   }
 
   constructor() {
