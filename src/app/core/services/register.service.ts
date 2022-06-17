@@ -13,18 +13,15 @@ export class RegisterService {
   }
 
   register(user: User): boolean {
-    let success: boolean = false;
+    let success: boolean = true;
     this.http.put(this.registerUrl, user).subscribe({
       next: res => {
-        success = true;
       },
       error: err => {
         console.error('There was an error!', err.message);
-        success = false;
       }
     });
-
-    return success;
+    return false;
   }
 
 }
