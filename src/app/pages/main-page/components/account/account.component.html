@@ -3,7 +3,7 @@
 </div>
 
 <div class="container">
-  <img class="account-image" src="https://localhost:5001/image/4">
+  <img class="account-image" src="{{getPath(user.avatarId)}}">
   <div id="inputs">
     <app-data [defaultText]="'Name'" [text]="user.name"></app-data>
     <app-data [defaultText]="'Username'" [text]="user.username"></app-data>

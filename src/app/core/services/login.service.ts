@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpResponse} from "@angular/common/http";
 import {GlobalConstants} from "../../global-constants";
-import {shareReplay, tap} from "rxjs";
+import {Observable, shareReplay, tap} from "rxjs";
 import {UserLogin} from "../models/userLogin";
 import {Response} from "../models/Response";
 
@@ -14,19 +14,8 @@ export class LoginService {
   constructor(private http: HttpClient) {
   }
 
-  login(user: UserLogin): boolean {
-    this.http.post<Response>(this.loginUrl, user,
-      {observe: "response"}
-    ).subscribe({
-      next: res => {
-        if (res.body?.token != null)
-          sessionStorage.setItem("token", res.body?.token);
-      },
-      error: err => {
-        console.error('There was an error!', err.message);
-      }
-    })
-    return false;
+  login(user: UserLogin): Observable<HttpResponse<Response>> {
+    return this.http.post<Response>(this.loginUrl, user,{observe: "response"});
   }
 
   refresh(): boolean {

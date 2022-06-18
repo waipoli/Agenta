@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
 @import "src/main-styles";
 
-#username{
+#username {
   font-size: 1.8rem;
   margin-right: 1rem;
   color: $yellow;
@@ -22,9 +22,17 @@
   font-size: 0.9rem;
 }
 
-#f {
+.register-or-login {
   color: $text-color;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-right: 0.5rem;
-  margin-left: 0.5rem
+  margin-left: 0.5rem;
+  &:hover{
+    color:$yellow;
+  }
+}
+
+#end{
+  margin-right: 2.5rem;
+
 }

@@ -29,14 +29,24 @@ export class LoginComponent implements OnInit {
     this.loginService.login({
       username: username,
       password: password
-    });
-    if (sessionStorage.getItem("token") != null) {
-      this.userService.getUser().subscribe((user: User) => {
-        if (user != null)
-          sessionStorage.setItem("User",JSON.stringify(user))
-          this._router.navigate(["/"]);
-        })
-    }
+    }).subscribe({
+      next: res => {
+        if (res.body?.token != null)
+          sessionStorage.setItem("token", res.body?.token);
+        if (sessionStorage.getItem("token") != null) {
+          this.userService.getUser().subscribe((user: User) => {
+            if (user != null)
+              sessionStorage.setItem("User", JSON.stringify(user))
+            this._router.navigate(["/"]);
+          })
+        }
+      },
+      error: err => {
+        console.error('There was an error!', err.message);
+      }
+    })
+
+
   }
 }
 

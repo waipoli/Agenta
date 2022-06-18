@@ -18,6 +18,7 @@ export class TopPanelComponent implements OnInit {
     birthdayDay: new Date(),
     country: "",
     details: "",
+    avatarId:0,
     password:""
   }
 

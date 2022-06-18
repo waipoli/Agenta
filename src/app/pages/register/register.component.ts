@@ -40,6 +40,7 @@ export class RegisterComponent implements OnInit {
       details: "",
       birthdayDay: new Date(),
       country: "",
+      avatarId:0,
       id: 0
     }
 

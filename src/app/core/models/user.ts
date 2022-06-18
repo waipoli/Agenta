@@ -6,5 +6,6 @@ export interface User {
   birthdayDay: Date;
   country: string;
   details: string;
+  avatarId: number;
   password: string;
 }

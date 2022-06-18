@@ -1,11 +1,11 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ActivatedRoute, Params, Router } from "@angular/router";
-import { A } from "@angular/cdk/keycodes";
-import { GlobalConstants } from "../../../../global-constants";
-import { min } from "rxjs";
-import { New } from 'src/app/core/models/new';
-import { NewsService } from 'src/app/core/services/news.service';
-import { tap } from 'rxjs';
+import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {A} from "@angular/cdk/keycodes";
+import {GlobalConstants} from "../../../../global-constants";
+import {min} from "rxjs";
+import {New} from 'src/app/core/models/new';
+import {NewsService} from 'src/app/core/services/news.service';
+import {tap} from 'rxjs';
 
 @Component({
   selector: 'app-news',
@@ -25,7 +25,6 @@ export class NewsComponent implements OnInit {
 
   createNewsList() {
     this.countOfNews = this.news.length;
-    console.log(this.countOfNews)
   }
 
   createSwitcher() {
@@ -138,6 +137,7 @@ export class NewsComponent implements OnInit {
   }
 
   f(): void {
+    this.createNewsList();
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -149,26 +149,21 @@ export class NewsComponent implements OnInit {
     )
     let pagesCount = (this.countOfNews + GlobalConstants.countOfNewsPerPage - 1) / (GlobalConstants.countOfNewsPerPage);
     pagesCount = Math.floor(pagesCount);
-    console.log(pagesCount);
     if (isNaN(this.pageId) || this.pageId < 0 || this.pageId >= pagesCount) {
       this.router.navigate(["/"]);
     }
-    this.createNewsList();
     this.createSwitcher();
   }
 
   ngOnInit(): void {
-    // get news
     this.newsService.getNews()
       .subscribe((data: New[]) => {
         this.news = data;
-        // this.f();
+        this.f();
       });
-    // console.log(this.news);
   }
 
   isThis(id: number) {
-    // console.log(this.data[id], this.pageId - 1 + 1 + 1)
     return this.data[id] == (this.pageId - 1 + 1 + 1).toString();
   }
 
@@ -179,4 +174,14 @@ export class NewsComponent implements OnInit {
       behavior: 'smooth'
     })
   }
+
+  getNewsForPage(): New[] {
+    let pageNews: New[] = [];
+    for (let i = GlobalConstants.countOfNewsPerPage * this.pageId; i < Math.min(GlobalConstants.countOfNewsPerPage * (2 + (this.pageId-1)), this.countOfNews); i++) {
+      console.log(i)
+      pageNews.push(this.news[i]);
+    }
+    return pageNews;
+  }
+
 }
