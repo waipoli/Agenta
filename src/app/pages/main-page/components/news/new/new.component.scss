@@ -1,5 +1,12 @@
 @import "src/main-styles";
 
+.content {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column;
+}
+
 .New {
   // cursor: pointer;
   //position: center;
@@ -8,7 +15,7 @@
   //align-items: center;
   //align-content: center;
   // justify-content: center;
-  width: 70%;
+  width: 45% !important;
   //height: 20rem;
   color: $text-color;
   background-color: $block-color2;
