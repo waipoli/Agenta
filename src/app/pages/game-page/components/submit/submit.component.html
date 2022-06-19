@@ -1,43 +1,43 @@
 <div class="Header">
-    <h1 class="header-text">Submit</h1>
+  <h1 class="header-text">Submit</h1>
 </div>
 <div class="block">
-    <h1 id="intro">Submit Chess Game Bot</h1>
-    <form [formGroup]="botForm">
-        <div class="step">
-            <h2>Step 1.</h2>
-            <h2>Upload zip archive of your bot</h2>
-            <!-- <input class="select-button" type="file" accept=".zip"> -->
-            <div id="upload-row">
-                <span id="file-selected">{{fileSelected}}</span>
-                <label class="custom-file-upload">
-                    <img src="./assets/images/cloud.png" id="upload-icon">
-                    <input type="file" accept=".zip" (change)="onFileSelected($event)">
-                </label>
-            </div>
-        </div>
-        <div class="step">
-            <h2>Step 2.</h2>
-            <h2>Choose Language</h2>
+  <h1 id="intro">Submit Chess Game Bot</h1>
+  <form id="form-data" [formGroup]="botForm">
+    <div class="step">
+      <h2>Step 1.</h2>
+      <h2>Upload zip archive of your bot</h2>
+      <!-- <input class="select-button" type="file" accept=".zip"> -->
+      <div id="upload-row">
+        <span id="file-selected">{{fileSelected}}</span>
+        <label class="custom-file-upload">
+          <img src="./assets/images/cloud.png" id="upload-icon">
+          <input type="file" accept=".zip" (change)="onFileSelected($event)">
+        </label>
+      </div>
+    </div>
+    <div class="step">
+      <h2>Step 2.</h2>
+      <h2>Choose Language</h2>
 
-            <label id="label-language" for="language">Language:</label>
+      <label id="label-language" for="language">Language:</label>
 
-            <select name="language" id="select-language" formControlName="language" required>
-                <option class="option" value="c++">C++</option>
-                <option value="python">Python</option>
-                <option value="java">Java</option>
-                <option value="pascal">Pascal</option>
-            </select>
-        </div>
-        <div class="step">
-            <h2>Step 3.</h2>
-            <h2>Give your bot a name</h2>
+      <select name="language" id="select-language" formControlName="language" required>
+        <option class="option" value="c++">C++</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="pascal">Pascal</option>
+      </select>
+    </div>
+    <div class="step">
+      <h2>Step 3.</h2>
+      <h2>Give your bot a name</h2>
 
-            <label id="label-name" for="name">Name:</label>
-            <input id="bot-name-input" formControlName="name" required>
+      <label id="label-name" for="name">Name:</label>
+      <input id="bot-name-input" formControlName="name" required>
 
-        </div>
+    </div>
 
-        <button id="submit-button" (click)="saveBot()">Submit Bot</button>
-    </form>
+    <button class="apply-button sub-but"  (click)="saveBot()">Submit Bot</button>
+  </form>
 </div>

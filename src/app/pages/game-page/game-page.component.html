@@ -16,5 +16,6 @@
     <span class="text">{{game.name}}{{leftTime}}</span>
     <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
          routerLink="/account"></div>
+  <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
 </div>
 <router-outlet></router-outlet>

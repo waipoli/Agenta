@@ -36,3 +36,15 @@
   margin-right: 2.5rem;
 
 }
+
+#logout{
+  cursor: pointer;
+  transform: scale(2,2);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: $text-color;
+  &:hover{
+    color: $yellow;
+    transform: scale(2.1,2.1);
+  }
+}

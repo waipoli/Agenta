@@ -16,6 +16,10 @@ export class NewsService {
   }
 
   getNews(): Observable<New[]> {
-    return this.http.get<New[]>(this.newsListUrl);
-  }
+    let auth_token = sessionStorage.getItem('token')
+    return this.http.get<New[]>(this.newsListUrl, {
+      headers: {
+        'Authorization': `Bearer ${auth_token}`
+      }
+    });  }
 }

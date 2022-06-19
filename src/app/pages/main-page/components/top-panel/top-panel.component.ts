@@ -14,12 +14,12 @@ export class TopPanelComponent implements OnInit {
     id: -1,
     name: "",
     username: "",
-    email:"",
+    email: "",
     birthdayDay: new Date(),
     country: "",
     details: "",
-    avatarId:0,
-    password:""
+    avatarId: 0,
+    password: ""
   }
 
   constructor(private router: Router) {
@@ -30,9 +30,22 @@ export class TopPanelComponent implements OnInit {
     if (t != null) {
       this.user = JSON.parse(t);
     }
+    setInterval(() => {
+      let t: string | null = sessionStorage.getItem("User");
+      if (t != null) {
+        this.user = JSON.parse(t);
+      } else {
+        this.user.id = -1;
+      }
+    }, 10)
   }
 
   isButtonSelected(buttonName: string): boolean {
     return buttonName === this.router.url.replace('/', '').split('/')[0];
+  }
+
+  logout() {
+    sessionStorage.clear();
+    this.router.navigate(["/"])
   }
 }

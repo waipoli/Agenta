@@ -5,12 +5,29 @@
 <div class="container">
   <img class="account-image" src="{{getPath(user.avatarId)}}">
   <div id="inputs">
-    <app-data [defaultText]="'Name'" [text]="user.name"></app-data>
-    <app-data [defaultText]="'Username'" [text]="user.username"></app-data>
-    <app-data [defaultText]="'Birthday day'" [text]="user.birthdayDay.toString()"></app-data>
-    <app-data [defaultText]="'Country'" [text]="user.country"></app-data>
-    <app-data [defaultText]="'Description'" [text]="user.details"></app-data>
+    <app-data [defaultText]="'Name'" [(text)]="user.name"></app-data>
+    <app-data [defaultText]="'Username'" [(text)]="user.username"></app-data>
+    <app-data [defaultText]="'Country'" [(text)]="user.country"></app-data>
+    <app-data [defaultText]="'Description'" [(text)]="user.details"></app-data>
+    <button class="apply-button fix-class" (click)="isOpen = !isOpen">Change password</button>
+    <div class="change-password-container" *ngIf="isOpen">
+      <label class="info-text">Current password</label>
+      <input type="password" class="text-field" #oldPassword>
+
+      <label class="info-text">New password</label>
+      <input type="password" class="text-field" #pwdInput>
+
+      <label class="info-text">Repeat password</label>
+      <input type="password" class="text-field" #pwd1Input>
+      <button class="apply-button fix-class" id="login-button"
+              (click)="updatePassword(oldPassword.value,pwd1Input.value,pwdInput.value)">Update password
+      </button>
+    </div>
+    <div *ngIf="isChanged()">
+      <button class="apply-button fix-class" (click)="onClick()">Save changes</button>
+    </div>
   </div>
+
 </div>
 
 <!--<app-data></app-data>-->

@@ -77,4 +77,9 @@ export class GamePageComponent implements OnInit {
   isButtonSelected(buttonName: string): boolean {
     return buttonName === this.router.url.replace('/game/' + this.id + '/', '');
   }
+
+  logout() {
+    sessionStorage.clear();
+    this.router.navigate(["/"])
+  }
 }

@@ -1,3 +1,5 @@
+@import "src/main-styles";
+
 .container {
   display: flex;
   flex-direction: row;
@@ -35,3 +37,41 @@
   height: 100%;
 }
 
+.fix-class {
+  margin: 2.5rem auto auto;
+  width: 70% !important;
+  height: 3rem;
+  text-align: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+
+  &:active {
+    color: white;
+    background-color: $yellow !important;
+  }
+}
+
+.change-password-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  background-color: #FBFBFB;
+  border-radius: 20px;
+  height: 75%;
+  //width: 90%;
+
+}
+
+#login-button {
+  background-color: #FBFBFB;
+  padding: 1rem 5rem;
+  margin: auto;
+  width: 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  height: 4rem;
+
+}

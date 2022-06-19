@@ -15,7 +15,7 @@ export class LoginService {
   }
 
   login(user: UserLogin): Observable<HttpResponse<Response>> {
-    return this.http.post<Response>(this.loginUrl, user,{observe: "response"});
+    return this.http.post<Response>(this.loginUrl, user, {observe: "response"});
   }
 
   refresh(): boolean {
@@ -34,6 +34,7 @@ export class LoginService {
           sessionStorage.setItem("token", res.body?.token);
       },
       error: err => {
+        sessionStorage.clear();
         console.error('There was an error!', err.message);
       }
     })

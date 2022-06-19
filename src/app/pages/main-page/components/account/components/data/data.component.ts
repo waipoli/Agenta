@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-data',
@@ -6,15 +6,28 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit {
-  @Input() text?: string;
+  @Input() text!: string;
+  @Output() textChange = new EventEmitter();
+
   @Input() defaultText?: string;
   isEdit: boolean | undefined;
+  @Input() isDate: boolean | undefined;
+
 
   constructor() {
   }
 
+  changeState() {
+    this.isEdit = !this.isEdit;
+    this.textChange.emit(this.text)
+  }
+
   ngOnInit(): void {
     this.isEdit = false;
+    if (this.isDate == null) {
+      this.isDate = false;
+    }
+
   }
 
   getText(): string {
