@@ -3,6 +3,7 @@ import {HttpResponse} from "@angular/common/http";
 import {GlobalConstants} from "../../global-constants";
 import {RegisterService} from "../../core/services/register.service";
 import {User} from "../../core/models/user";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,8 +12,10 @@ import {User} from "../../core/models/user";
 })
 export class RegisterComponent implements OnInit {
   title = GlobalConstants.title;
+  passwordMatch = ""
+  usernameEmpty = ""
 
-  constructor(private _registerService: RegisterService) {
+  constructor(private router: Router, private _registerService: RegisterService) {
   }
 
   ngOnInit(): void {
@@ -20,15 +23,15 @@ export class RegisterComponent implements OnInit {
 
   register(name: string, email: string, password: string, password_check: string) {
     if (password != password_check) {
-      console.log("Password doesn't match!!!")
-      return
+      this.passwordMatch = "Password doesn't match";
+      return;
     }
     if (password_check == "") {
-      console.log("Password to easy!!!");
+      this.passwordMatch = "Password too easy";
       return;
     }
     if (name == "") {
-      console.log("Username must be not empty");
+      this.usernameEmpty = "Username must not be empty";
       return;
     }
 
@@ -43,12 +46,18 @@ export class RegisterComponent implements OnInit {
       avatarId:0,
       id: 0
     }
-
-    if (this._registerService.register(user)) {
-      console.log("Success!!!")
-    } else {
-      console.log("Error!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    }
+    this._registerService.register(user).subscribe({
+      next: res => {
+        console.log("Success!!!")
+        this.router.navigate(["/login"]);
+      },
+      error: err => {
+        console.log(err.error)
+        if (err.error == "username-duplicate") {
+          this.usernameEmpty = "This username is already taken by another user";
+        }
+      }
+    });
 
 
     // this.api.register(name, password).subscribe((req: HttpResponse<any>) => {

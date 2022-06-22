@@ -3,7 +3,8 @@
 
 .apply-button {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
   min-height: 1rem;
   color: $text-color;
   font-size: 20px;
@@ -13,8 +14,8 @@
   background-color: $background;
   border-style: solid;
   border-radius: 8px;
-  border-width: 0px;
-  border-color: $yellow;
+  border-width: 1px;
+  border-color: $border-color;
   transform: scale(1);
   transition: border-width 0.1s, transform 0s, background-color 0s;
   cursor: pointer;
@@ -22,12 +23,12 @@
 
   &:hover {
     border-width: 3px;
-    color: $hovered-color;
+    border-color: $yellow;
   }
 
   &:active {
     background-color: $yellow;
-    color: $hovered-color;
+    color: white;
     transform: scale(0.99);
   }
 }
@@ -203,8 +204,17 @@
   display: flex;
   flex-direction: row;
   height: 5rem;
-  background-color: white;
+  background-color: $background;
   align-items: center;
   border: 0px solid #D1D1D1;
   border-bottom-width: 1px;
+}
+
+.error {
+  color: #FF9292;
+  font-family: "Space Grotesk" !important;
+  font-size: 1.1rem;
+  margin-top: 2rem; 
+  margin-left: 1.2rem;
+  font-weight: 600;
 }

@@ -20,9 +20,21 @@ export class BotFormService {
   }
 
   public getBotFromForm(): Bot {
+    let u = sessionStorage.getItem('User')
+    if (u == null) {
+      // error
+      console.error("NULL USER!!!");
+      return {
+        id: 0,
+        userId: 0,
+        gameId: 0,
+        name: "",
+        language: ""
+      };
+    }
     const result: Bot = {
       gameId: 0,
-      userId: 0,
+      userId: JSON.parse(u).id,
       name: this.botForm?.get('name')?.value,
       language: this.botForm?.get('language')?.value
     };

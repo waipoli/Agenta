@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {GlobalConstants} from "../../global-constants";
 import {User} from "../models/user";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,16 +13,8 @@ export class RegisterService {
   constructor(private http: HttpClient) {
   }
 
-  register(user: User): boolean {
-    let success: boolean = true;
-    this.http.put(this.registerUrl, user).subscribe({
-      next: res => {
-      },
-      error: err => {
-        console.error('There was an error!', err.message);
-      }
-    });
-    return false;
+  register(user: User): Observable<String> {
+    return this.http.put<String>(this.registerUrl, user);
   }
 
 }

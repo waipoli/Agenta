@@ -6,6 +6,7 @@ import {UserService} from "../../../../core/services/user.service";
 import {GlobalConstants} from "../../../../global-constants";
 import {J} from "@angular/cdk/keycodes";
 import {PasswordChange} from "../../../../core/models/passwordChange";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -21,7 +22,7 @@ export class AccountComponent implements OnInit {
     birthdayDay: new Date(),
     country: "",
     details: "",
-    avatarId: 0,
+    avatarId: 1,
     password: ""
   }
   savedUser: User = {
@@ -32,13 +33,13 @@ export class AccountComponent implements OnInit {
     birthdayDay: new Date(),
     country: "",
     details: "",
-    avatarId: 0,
+    avatarId: 1,
     password: ""
   }
 
   isOpen: boolean = false;
 
-  constructor(private userService: UserService) {
+  constructor(private router: Router, private userService: UserService) {
   }
 
   getPath(imageId: number): string {
@@ -46,6 +47,10 @@ export class AccountComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (sessionStorage.getItem("token") == null) {
+      this.router.navigate(["/login"]);
+      return;
+    }
     let t: string | null = sessionStorage.getItem("User");
     if (t != null) {
       this.user = JSON.parse(t);

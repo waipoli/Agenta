@@ -26,6 +26,11 @@ export class GamePageComponent implements OnInit {
   id: string = ""
 
   ngOnInit(): void {
+    if (sessionStorage.getItem("token") == null) {
+      this.router.navigate(["/login"]);
+      return;
+    }
+
     this._route.params.subscribe(
       (params: Params) => {
         // @ts-ignore

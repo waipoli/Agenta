@@ -14,6 +14,7 @@ import {StandingsComponent} from "./pages/game-page/components/standings/standin
 import {AccountComponent} from "./pages/main-page/components/account/account.component";
 
 const routes: Routes = [
+  {path: '', redirectTo: '/news/0', pathMatch: "full"},
   {
     path: '', component: MainPageComponent, children: [
       {path: 'news/:id', component: NewsComponent},
@@ -25,12 +26,13 @@ const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'game/:id', component: GamePageComponent,children:[
+  {path: 'game/:id', component: GamePageComponent, children:[
       {path: 'problem', component: ProblemComponent},
       {path: 'submit', component: SubmitComponent},
       {path: 'my-submission', component: MyBotsComponent},
       {path: 'standings', component: StandingsComponent}
-    ]}
+    ]
+  }
 ];
 
 @NgModule({

@@ -4,7 +4,9 @@
     <h1>Register to <strong><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></strong></h1>
   </div>
 
+
   <div class="register-content">
+    <span class="error">{{usernameEmpty}}</span>
     <div class="info-text">
       <p>Username</p>
     </div>
@@ -16,7 +18,7 @@
       <p>E-mail</p>
     </div>
     <input class="text-field" id="email" #emailInput>
-
+    <span class="error">{{passwordMatch}}</span>
     <div class="info-text">
       <p>Password</p>
     </div>

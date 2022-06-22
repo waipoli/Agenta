@@ -178,7 +178,6 @@ export class NewsComponent implements OnInit {
   getNewsForPage(): New[] {
     let pageNews: New[] = [];
     for (let i = GlobalConstants.countOfNewsPerPage * this.pageId; i < Math.min(GlobalConstants.countOfNewsPerPage * (2 + (this.pageId-1)), this.countOfNews); i++) {
-      console.log(i)
       pageNews.push(this.news[this.news.length - i - 1]);
     }
     return pageNews;

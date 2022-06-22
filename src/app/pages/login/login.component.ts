@@ -16,6 +16,7 @@ import {User} from "../../core/models/user";
 })
 export class LoginComponent implements OnInit {
   title: String = GlobalConstants.title;
+  passwordError = "";
 
   constructor(private _router: Router, private loginService: LoginService, private userService: UserService) {
   }
@@ -42,7 +43,8 @@ export class LoginComponent implements OnInit {
         }
       },
       error: err => {
-        console.error('There was an error!', err.message);
+        console.log("error")
+        this.passwordError = "User with this username and password not found";
       }
     })
 
