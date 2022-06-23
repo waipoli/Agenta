@@ -12,6 +12,7 @@ import {SubmitComponent} from "./pages/game-page/components/submit/submit.compon
 import {MyBotsComponent} from "./pages/game-page/components/my-bots/my-bots.component";
 import {StandingsComponent} from "./pages/game-page/components/standings/standings.component";
 import {AccountComponent} from "./pages/main-page/components/account/account.component";
+import {CreateGameComponent} from "./pages/creates/create-game/create-game.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/news/0', pathMatch: "full"},
@@ -26,13 +27,14 @@ const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'game/:id', component: GamePageComponent, children:[
+  {path: 'creates/create-game', component: CreateGameComponent},
+  {
+    path: 'game/:id', component: GamePageComponent, children: [
       {path: 'problem', component: ProblemComponent},
       {path: 'submit', component: SubmitComponent},
       {path: 'my-submission', component: MyBotsComponent},
       {path: 'standings', component: StandingsComponent}
-    ]
-  }
+    ]}
 ];
 
 @NgModule({

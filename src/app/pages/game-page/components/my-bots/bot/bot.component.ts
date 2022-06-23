@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-bot',
@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
-  name = 'ElMishucha';
-  language = 'C++';
-  date = '3 days ago';
+  @Input() name = 'ElMishucha';
+  @Input() language = 'C++';
+  @Input() date = '3 days ago';
 
   constructor() { }
 

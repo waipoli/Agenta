@@ -1,0 +1,31 @@
+<div class="submit-content">
+  <div class="part">
+    <div class="fix">
+      <h2>Say title of your game</h2>
+      <input class="text-field">
+    </div>
+  </div>
+  <div class="part">
+    <div class="fix">
+      <h2>Enter Uslovie </h2>
+      <editor class="editor-container" [(ngModel)]="html"
+              apiKey="on5c0wvjgxv3eed46mn4k6c7biepa0img2d4dzji2qjp3ol2"
+              [init]="{ plugins: 'lists link image table code help wordcount',
+        selector:'standings',
+        skin_url: 'https://localhost:5001/tinymceskins'
+}"
+      ></editor>
+    </div>
+  </div>
+  <div id="upload-row">
+    <span id="file-selected">{{fileSelected}}</span>
+    <label class="custom-file-upload">
+      <img src="./assets/images/cloud.png" id="upload-icon">
+      <input type="file" accept=".zip" (change)="onFileSelected($event)">
+    </label>
+  </div>
+
+  <button class="apply-button sub-but">Submit Game</button>
+
+
+</div>

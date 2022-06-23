@@ -9,8 +9,8 @@
     <span id="lang">Language</span>
     <span id="date">Date</span>
   </div>
-  <app-bot></app-bot>
-  <app-bot></app-bot>
-  <app-bot></app-bot>
+    <ng-container *ngFor="let bot of Bots">
+      <app-bot [name]="bot.name" [language]="bot.language"></app-bot>
+    </ng-container>
 </div>
 </body>

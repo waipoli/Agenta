@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Bot } from '../models/bot';
+import {Injectable} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Bot} from '../models/bot';
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +20,11 @@ export class BotFormService {
   }
 
   public getBotFromForm(): Bot {
-    let u = sessionStorage.getItem('User')
-    if (u == null) {
+    let user = sessionStorage.getItem('User')
+    let game = sessionStorage.getItem('game')
+    if (user == null || game == null) {
       // error
-      console.error("NULL USER!!!");
+      console.error("NULL USER OR GAME!!!");
       return {
         id: 0,
         userId: 0,
@@ -33,8 +34,8 @@ export class BotFormService {
       };
     }
     const result: Bot = {
-      gameId: 0,
-      userId: JSON.parse(u).id,
+      gameId: JSON.parse(game).id,
+      userId: JSON.parse(user).id,
       name: this.botForm?.get('name')?.value,
       language: this.botForm?.get('language')?.value
     };

@@ -28,6 +28,8 @@ import { BotComponent } from './pages/game-page/components/my-bots/bot/bot.compo
 import { StandingsBlockComponent } from './pages/game-page/components/standings/standings-block/standings-block.component';
 import { AccountComponent } from './pages/main-page/components/account/account.component';
 import { DataComponent } from './pages/main-page/components/account/components/data/data.component';
+import { CreateGameComponent } from './pages/creates/create-game/create-game.component';
+import {EditorModule} from "@tinymce/tinymce-angular";
 
 @NgModule({
     declarations: [
@@ -51,6 +53,7 @@ import { DataComponent } from './pages/main-page/components/account/components/d
         AccountComponent,
         DataComponent,
         SafeHtmlPipe,
+        CreateGameComponent
     ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { DataComponent } from './pages/main-page/components/account/components/d
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
