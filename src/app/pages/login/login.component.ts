@@ -6,6 +6,8 @@ import {GamesService} from "../../core/services/games.service";
 import {LoginService} from "../../core/services/login.service";
 import {UserService} from "../../core/services/user.service";
 import {User} from "../../core/models/user";
+import { LoginFormService } from 'src/app/core/services/login-form.service';
+import { FormGroup } from '@angular/forms';
 
 // import * as Console from "console";
 
@@ -17,8 +19,9 @@ import {User} from "../../core/models/user";
 export class LoginComponent implements OnInit {
   title: String = GlobalConstants.title;
   passwordError = "";
+  loginForm: FormGroup = this.LoginFormService.loginForm;
 
-  constructor(private _router: Router, private loginService: LoginService, private userService: UserService) {
+  constructor(private _router: Router, private LoginFormService: LoginFormService, private loginService: LoginService, private userService: UserService) {
   }
 
 
@@ -26,11 +29,10 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login(username: string, password: string) {
-    this.loginService.login({
-      username: username,
-      password: password
-    }).subscribe({
+  login() {
+    this.loginService.login(
+      this.LoginFormService.getUserFromForm(),
+    ).subscribe({
       next: res => {
         if (res.body?.token != null)
           sessionStorage.setItem("token", res.body?.token);
@@ -43,12 +45,15 @@ export class LoginComponent implements OnInit {
         }
       },
       error: err => {
-        console.log("error")
         this.passwordError = "User with this username and password not found";
       }
     })
 
 
+  }
+
+  clearPasswordError(): void {
+    this.passwordError = ""
   }
 }
 

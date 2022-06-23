@@ -65,16 +65,9 @@ export class AccountComponent implements OnInit {
         oldPassword: oldPasswrod,
         newPassword: newPassword2
       }
-      this.userService.updatePassword(passwordChange).subscribe({
-        next: res => {
-          console.log("res")
-        },
-        error: err => {
-          console.log(err)
-        }
-      })
+      this.userService.updatePassword(passwordChange).subscribe()
     } else {
-      console.log("No.")
+      // passwords don't match
     }
   }
 

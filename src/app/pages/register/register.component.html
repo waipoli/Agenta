@@ -5,39 +5,33 @@
   </div>
 
 
-  <div class="register-content">
-    <span class="error">{{usernameEmpty}}</span>
-    <div class="info-text">
-      <p>Username</p>
+  <form class="form" [formGroup]="registerForm">
+    <div class="form-content">
+      <span class="error">{{usernameEmpty}}</span>
+      <label class="info-text">Username</label>
+      <input class="text-field" formControlName="username" (ngModelChange)="clearUsernameError()" required>
+
+      <label class="info-text">E-mail</label>
+      <input type="email" class="text-field" id="email" #emailInput formControlName="email" required>
+
+      <span class="error">{{passwordMatch}}</span>
+      <label class="info-text">Password</label>
+      <input type="password" class="text-field" id="password" formControlName="password" (change)="clearPasswordError()" required>
+
+      <label class="info-text">Repeat Password</label>
+      <input type="password" class="text-field" id="repeat-password" formControlName="password2" (change)="clearPasswordError()" required>
+
+
+      <button class="apply-button" id="register-button"
+        (click)="register()">Register
+      </button>
     </div>
-
-    <input class="text-field" #nameInput>
-
-
-    <div class="info-text">
-      <p>E-mail</p>
-    </div>
-    <input type="email" class="text-field" id="email" #emailInput>
-    <span class="error">{{passwordMatch}}</span>
-    <div class="info-text">
-      <p>Password</p>
-    </div>
-    <input type="password" class="text-field" id="password" #password1Input>
-    <div class="info-text">
-      <p>Repeat Password</p>
-    </div>
-    <input type="password" class="text-field" id="repeat-password" #password2Input>
-
-
-    <button class="apply-button" id="register-button"
-            (click)="register(nameInput.value,emailInput.value,password1Input.value,password2Input.value)">Register
-    </button>
-  </div>
+  </form>
 
   <div class="newbie-content">
-    <div id="newbie-link">Have an account?<a href="/login" id="link-signup" class="link">Sign in</a>!</div>
+    <div id="newbie-link">Have an account? <a href="/login" id="link-signup" class="link">Sign in</a>!</div>
   </div>
-  <div id="suportinfo">
+  <!-- <div id="suportinfo">
     Supported by MandM team
-  </div>
+  </div> -->
 </div>

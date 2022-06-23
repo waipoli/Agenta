@@ -2,8 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {HttpResponse} from "@angular/common/http";
 import {GlobalConstants} from "../../global-constants";
 import {RegisterService} from "../../core/services/register.service";
+import { RegisterFormService } from 'src/app/core/services/register-form.service';
 import {User} from "../../core/models/user";
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
+import { UserRegister } from 'src/app/core/models/userRegister';
 
 @Component({
   selector: 'app-register',
@@ -14,32 +17,34 @@ export class RegisterComponent implements OnInit {
   title = GlobalConstants.title;
   passwordMatch = ""
   usernameEmpty = ""
+  registerForm: FormGroup = this.registerFormService.registerForm;
 
-  constructor(private router: Router, private _registerService: RegisterService) {
+  constructor(private router: Router, private _registerService: RegisterService, private registerFormService: RegisterFormService) {
   }
 
   ngOnInit(): void {
   }
 
-  register(name: string, email: string, password: string, password_check: string) {
-    if (password != password_check) {
+  register() {
+    let userRegister: UserRegister = this.registerFormService.getUserFromForm();
+    if (userRegister.password != userRegister.password2) {
       this.passwordMatch = "Password doesn't match";
       return;
     }
-    if (password_check == "") {
+    if (userRegister.password2 == "") {
       this.passwordMatch = "Password too easy";
       return;
     }
-    if (name == "") {
+    if (userRegister.username == "") {
       this.usernameEmpty = "Username must not be empty";
       return;
     }
 
     let user: User = {
-      username: name,
-      password: password,
-      email: email,
-      name: name,
+      username: userRegister.username,
+      password: userRegister.password,
+      email: userRegister.email,
+      name: "",
       details: "",
       birthdayDay: new Date(),
       country: "",
@@ -48,24 +53,22 @@ export class RegisterComponent implements OnInit {
     }
     this._registerService.register(user).subscribe({
       next: res => {
-        console.log("Success!!!")
         this.router.navigate(["/login"]);
       },
       error: err => {
-        console.log(err.error)
         if (err.error == "username-duplicate") {
           this.usernameEmpty = "This username is already taken by another user";
         }
       }
     });
 
+  }
 
-    // this.api.register(name, password).subscribe((req: HttpResponse<any>) => {
-    //   if (req.body.register != 0) {
-    //     console.log("Successfully register!!!");
-    //   } else {
-    //     console.log("this name already used((");
-    //   }
-    // });
+  clearPasswordError(): void {
+    this.passwordMatch = ""
+  }
+
+  clearUsernameError(): void {
+    this.usernameEmpty = ""
   }
 }

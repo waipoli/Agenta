@@ -4,24 +4,25 @@
     <h1>Sign in to <strong><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></strong></h1>
   </div>
 
-  <div class="login-content">
-    <span class="error">{{passwordError}}</span>
-    <label class="info-text">Username</label>
-    <input class="text-field" #nameInput>
+  <form class="form" [formGroup]="loginForm">
+    <div class="form-content">
+      <span class="error">{{passwordError}}</span>
+      <label class="info-text">Username</label>
+      <input class="text-field" formControlName="username" (ngModelChange)="clearPasswordError()" required>
 
-    <label class="info-text">Password</label>
-    <input type="password" class="text-field" id="password" #pwdInput>
+      <label class="info-text">Password</label>
+      <input type="password" class="text-field" id="password" formControlName="password" (ngModelChange)="clearPasswordError()" required>
 
-    <button class="apply-button" id="login-button" (click)="login(nameInput.value,pwdInput.value)">Sign
-      in</button>
-  </div>
-
+      <button class="apply-button" id="login-button" (click)="login()">Sign in</button>
+    </div>
+  </form>
   <div class="newbie-content">
     <div id="newbie-link">New to <b><a href="https://ag45.dots.org.ua/help" class="link">{{title}}</a></b>? <a
         href="/register" id="link-signup" class="link">Sign up</a>!
     </div>
+
   </div>
-  <div id="suportinfo">
+  <!-- <div id="suportinfo">
     Supported by MandM team
-  </div>
+  </div> -->
 </div>

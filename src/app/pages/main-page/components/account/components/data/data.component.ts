@@ -6,7 +6,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./data.component.scss']
 })
 export class DataComponent implements OnInit {
-  @Input() text!: string;
+  @Input() text?: string;
   @Output() textChange = new EventEmitter();
 
   @Input() defaultText?: string;

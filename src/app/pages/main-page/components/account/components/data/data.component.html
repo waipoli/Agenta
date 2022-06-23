@@ -1,10 +1,10 @@
 <div class="data-text">
   <ng-container *ngIf="isEdit">
     <ng-container *ngIf="isDate">
-      <input  type="date" [(ngModel)]="text" placeholder="{{getText()}}" class="text italic">
+      <!-- <input type="date" [(ngModel)]="text" placeholder="{{getText()}}" class="text italic"> -->
     </ng-container>
     <ng-container *ngIf="!isDate">
-      <input [(ngModel)]="text" placeholder="{{getText()}}" class="text italic">
+      <!-- <input [(ngModel)]="text" placeholder="{{getText()}}" class="text italic"> -->
     </ng-container>
   </ng-container>
   <ng-container *ngIf="!isEdit">
@@ -21,4 +21,3 @@
     </ng-container>
   </div>
 </div>
-

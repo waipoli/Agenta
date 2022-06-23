@@ -29,9 +29,9 @@ export class SubmitComponent implements OnInit {
   }
 
   saveBot(): void {
-    if (this.file != null)
-      this.botService.upsertBot(this.file)
-        .pipe(tap(d => console.log(d)))
-        .subscribe();
+    if (this.file == null) {
+      return;
+    }
+    this.botService.upsertBot(this.file).subscribe();
   }
 }
