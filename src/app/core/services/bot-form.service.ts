@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Bot} from '../models/bot';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import {Bot} from '../models/bot';
 export class BotFormService {
   botForm: FormGroup;
 
-  constructor() {
+  constructor(private _route: Router) {
     this.botForm = this.createFormGroup()
   }
 
@@ -21,10 +22,10 @@ export class BotFormService {
 
   public getBotFromForm(): Bot {
     let user = sessionStorage.getItem('User')
-    let game = sessionStorage.getItem('game')
-    if (user == null || game == null) {
+
+    if (user == null) {
       // error
-      console.error("NULL USER OR GAME!!!");
+      console.error("NULL USER!!!");
       return {
         id: 0,
         userId: 0,
@@ -33,8 +34,10 @@ export class BotFormService {
         language: ""
       };
     }
+    let id: number = Number(this._route.url.split('/')[2])
+
     const result: Bot = {
-      gameId: JSON.parse(game).id,
+      gameId: id,
       userId: JSON.parse(user).id,
       name: this.botForm?.get('name')?.value,
       language: this.botForm?.get('language')?.value

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Bot} from "../../../../core/models/bot";
 import {BotService} from "../../../../core/services/bot.service";
 import {Game} from "../../../../core/models/game";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-my-bots',
@@ -11,21 +12,16 @@ import {Game} from "../../../../core/models/game";
 export class MyBotsComponent implements OnInit {
   Bots: Bot[] = new Array<Bot>();
 
-  constructor(private _botService: BotService) {
+  constructor(private _botService: BotService, private _route: Router) {
   }
 
   ngOnInit(): void {
 
-    setInterval(() => {
-      let x: string = ""
-      // @ts-ignore
-      x = sessionStorage.getItem("game")
+    let id: number = Number(this._route.url.split('/')[2])
 
-      let game: Game = JSON.parse(x);
-      this._botService.getBots(game.id).subscribe((res: Bot[]) => {
-        this.Bots = res;
-      })
-    }, 10)
+    this._botService.getBots(id).subscribe((res: Bot[]) => {
+      this.Bots = res;
+    })
 
   }
 

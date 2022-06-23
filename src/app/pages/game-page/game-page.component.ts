@@ -43,9 +43,7 @@ export class GamePageComponent implements OnInit {
       this.game = game;
       this.game.endDate = new Date(game.endDate);
       this.updateTime();
-      sessionStorage.setItem("game", JSON.stringify(this.game));
-
-    });
+   });
     this.updateTime();
 
     setInterval(() => {

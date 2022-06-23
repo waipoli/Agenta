@@ -17,7 +17,7 @@ export class SubmitComponent implements OnInit {
   language = new FormControl('c++');
   botForm: FormGroup = this.botFormService.botForm;
 
-  constructor(private botFormService: BotFormService, private botService: BotService) {
+  constructor(private botFormService: BotFormService, private botService: BotService,) {
   }
 
   ngOnInit(): void {

@@ -31,18 +31,19 @@ export class ProblemComponent implements OnInit {
     previewImageId: 0
   }
 
-  constructor() {
+  id: string = "";
+
+  constructor(private gamesService: GamesService, private _route: Router) {
 
   }
 
 
   ngOnInit(): void {
-    setInterval(() => {
-      var game = sessionStorage.getItem('game');
-      if (game != null)
-        this.game = JSON.parse(game);
-    }, 10)
+    this.id = this._route.url.split('/')[2]
+
+    this.gamesService.getGame(this.id).subscribe((game: Game) => {
+      this.game = game;
+    });
 
   }
-
 }
