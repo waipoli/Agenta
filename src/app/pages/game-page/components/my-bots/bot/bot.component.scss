@@ -1,11 +1,12 @@
 
 .bot {
   margin-bottom: 1rem;
-  padding: 2rem 8rem;
+  padding: 2rem 3rem;
   background-color: white;
   border-radius: 20px;
   display: flex;
   align-items: center;
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.15)
 }
 
 span {
@@ -14,10 +15,15 @@ span {
 }
 
 #name {
-  width: 30%;
+  width: 28%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+
 }
 
 #lang {
+  margin-left: 1rem;
   width: 25%;
 }
 
@@ -26,32 +32,45 @@ span {
 }
 
 .edit-buttons {
-  width: 20%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 
-}
-
-
-#edit {
-  //transform: scale(1,1.2);
-  cursor: pointer;
-  transition: color 0.08s;
-
-  &:hover {
-    color: #45DCCA;
-  }
 }
 
 #delete {
   //width: %;
   //transform: scale(1.2,1.2);
-
   cursor: pointer;
   transition: color 0.08s;
 
   &:hover {
     color: #FF6767;
   }
-  margin-left: 5rem;
+  //margin-left: 5rem;
+}
+
+#interact {
+
+  transition: color 0.08s;
+  animation-name: rotating;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}
+
+@keyframes rotating {
+  from {
+    display: flex;
+    margin-left: 1rem;
+    margin-top:auto;
+    margin-bottom: auto;
+    transform: rotate(0deg);
+  }
+  to {
+    display: flex;
+    margin-left: 1rem;
+    margin-top:auto;
+    margin-bottom: auto;
+    transform: rotate(360deg);
+  }
 }
