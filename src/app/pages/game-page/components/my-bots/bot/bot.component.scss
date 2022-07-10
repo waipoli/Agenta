@@ -46,12 +46,17 @@ span {
   &:hover {
     color: #FF6767;
   }
+
   //margin-left: 5rem;
 }
 
 #interact {
-
+  width: 2.5rem !important;
+  height: 2.5rem !important;
   transition: color 0.08s;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5rem;
   animation-name: rotating;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -61,16 +66,10 @@ span {
 @keyframes rotating {
   from {
     display: flex;
-    margin-left: 1rem;
-    margin-top:auto;
-    margin-bottom: auto;
     transform: rotate(0deg);
   }
   to {
     display: flex;
-    margin-left: 1rem;
-    margin-top:auto;
-    margin-bottom: auto;
     transform: rotate(360deg);
   }
 }

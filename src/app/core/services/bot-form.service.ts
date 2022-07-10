@@ -31,7 +31,9 @@ export class BotFormService {
         userId: 0,
         gameId: 0,
         name: "",
-        language: ""
+        language: "",
+        isValidate: false,
+        isChecked: false
       };
     }
     let id: number = Number(this._route.url.split('/')[2])
@@ -40,7 +42,10 @@ export class BotFormService {
       gameId: id,
       userId: JSON.parse(user).id,
       name: this.botForm?.get('name')?.value,
-      language: this.botForm?.get('language')?.value
+      language: this.botForm?.get('language')?.value,
+      isChecked: false,
+      isValidate: false
+
     };
 
     return result;

@@ -9,8 +9,11 @@ export class BotComponent implements OnInit {
   @Input() name = 'ElMishucha';
   @Input() language = 'C++';
   @Input() date = '3 days ago';
+  @Input() isValidate: boolean = false;
+  @Input() isChecked: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

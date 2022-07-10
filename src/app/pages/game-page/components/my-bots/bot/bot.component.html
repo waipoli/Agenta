@@ -4,6 +4,8 @@
   <span id="date">{{date}}</span>
   <div class="edit-buttons">
     <span id="delete"><i class="fa-solid fa-trash-can"></i></span>
-    <span id="interact"><i class="fa-solid fa-gear"></i></span>
+    <ng-container *ngIf="!isChecked">
+      <div id="interact"><img src="assets/images/gear.png"></div>
+    </ng-container>
   </div>
 </div>
