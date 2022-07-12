@@ -17,3 +17,34 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+#header {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
+}
+
+.qwe {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #6B6B6B;
+}
+
+#rank {
+    width: 4rem;
+}
+
+#name {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+#score {
+    width: 20%;
+}
+
+#time {
+    width: 30%;
+}

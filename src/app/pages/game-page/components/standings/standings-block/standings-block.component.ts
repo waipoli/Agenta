@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StandingsBlockComponent implements OnInit {
   @Input() num: number = 0;
   @Input() nickname?: string;
+  @Input() score?: number;
+  @Input() time?: number;
 
   constructor() { }
 

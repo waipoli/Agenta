@@ -1,23 +1,25 @@
 <div class="top-panel">
-  <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
-  <span class="agenta-title">{{title}}</span>
-  <div id="top-panel-buttons">
-    <button [class.selected]="isButtonSelected('news')" class="tab-button" routerLink="news/0">News</button>
-    <button [class.selected]="isButtonSelected('games')" class="tab-button" routerLink="games">Games</button>
-    <button [class.selected]="isButtonSelected('help')" class="tab-button" routerLink="help">Help</button>
-  </div>
-  <div *ngIf="user.id != -1" class="right-part">
-    <span id="username">{{user.username}}</span>
-    <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
-         routerLink="account">
-    <span id = "logout"  (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
-  </div>
-  <div *ngIf="user.id == -1" class="right-part">
-    <a class="register-or-login link" href="http://localhost:4200/register">Register</a>
-    <span id="or">or</span>
-    <a class="register-or-login link" id="end" href="http://localhost:4200/login">Login</a>
-  </div>
-  <div>
+  <div class="content">
+    <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
+    <span class="agenta-title">{{title}}</span>
+    <div id="top-panel-buttons">
+      <button [class.selected]="isButtonSelected('news')" class="tab-button" routerLink="news/0">News</button>
+      <button [class.selected]="isButtonSelected('games')" class="tab-button" routerLink="games">Games</button>
+      <button [class.selected]="isButtonSelected('help')" class="tab-button" routerLink="help">Help</button>
+    </div>
+    <div *ngIf="user.id != -1" class="right-part">
+      <span id="username">{{user.username}}</span>
+      <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
+        routerLink="account">
+      <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+    </div>
+    <div *ngIf="user.id == -1" class="right-part">
+      <a class="tab-button" href="http://localhost:4200/register">Register</a>
+      <span id="or">or</span>
+      <a class="tab-button" href="http://localhost:4200/login">Login</a>
+    </div>
+    <div>
 
+    </div>
   </div>
 </div>

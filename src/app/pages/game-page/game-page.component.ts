@@ -3,6 +3,8 @@ import {GlobalConstants} from "../../global-constants";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Game} from "../../core/models/game";
 import {GamesService} from "../../core/services/games.service";
+import { ChampionService } from 'src/app/core/services/champion.service';
+import { Champion } from 'src/app/core/models/champion';
 
 @Component({
   selector: 'app-game-page',
@@ -19,7 +21,9 @@ export class GamePageComponent implements OnInit {
     previewImageId: 0
   };
 
-  constructor(private gamesService: GamesService, private router: Router, private _route: ActivatedRoute) {
+  championsLength: number = 0;
+
+  constructor(private championService: ChampionService, private gamesService: GamesService, private router: Router, private _route: ActivatedRoute) {
   }
 
   leftTime: string = "";
@@ -38,6 +42,11 @@ export class GamePageComponent implements OnInit {
       }
     )
 
+    let id: number = Number(this.router.url.split('/')[2])
+
+    this.championService.getChampions(id).subscribe((res: Champion[]) => {
+      this.championsLength = res.length;
+    })
 
     this.gamesService.getGame(this.id).subscribe((game: Game) => {
       this.game = game;

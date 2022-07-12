@@ -99,19 +99,22 @@
   }
 }
 
+h1 {
+  font-weight: 500 !important;
+}
+
 .tab-button {
-  color: $block-color;
+  color: $text-color;
   border-width: 0;
   background-color: transparent;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.15rem;
+  font-weight: 400 !important;
   margin-left: 1rem;
   border-style: solid;
   border-color: #FFCF59;
   cursor: pointer;
-  font-family: "Space Grotesk" !important;
-  height: 5rem;
-
+  height: 4rem;
+  line-height: 4rem;
   &:hover {
     color: $yellow;
   }
@@ -128,25 +131,16 @@
 
 .agenta-title {
   color: black;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 2.1rem;
   margin-left: 1rem;
-  font-family: 'Space Grotesk';
 }
 
-.content {
-  display: flex;
-  position: center;
-  align-content: center;
-  align-items: center;
-  width: 58%;
-  //height: 98%;
-  flex-direction: column;
-}
+
 
 
 .account {
-  //margin-right: 3rem;
+  margin-right: 2rem;
   transition: transform 0.1s;
 
   &:hover {
@@ -183,10 +177,8 @@
 .header-text {
   margin-top: 4rem !important;
   text-align: center;
-  font-family: 'Space Grotesk' !important;
   color: black !important;
   font-size: 2.5rem !important;
-  font-weight: bold !important;
 }
 
 .content-text {
@@ -207,16 +199,18 @@
 .top-panel {
   display: flex;
   flex-direction: row;
-  height: 5rem;
+  height: 4rem;
   background-color: $background;
   align-items: center;
   border: 0px solid #D1D1D1;
   border-bottom-width: 1px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .error {
   color: #FF9292;
-  font-family: "Space Grotesk" !important;
   font-size: 1rem;
   // margin-top: 2rem; 
   // margin-left: 1.2rem;
@@ -238,6 +232,15 @@
 .form-content {
   width: 85%;
   height: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }

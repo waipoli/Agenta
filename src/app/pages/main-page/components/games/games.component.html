@@ -1,6 +1,7 @@
-<div class="Header">
-  <h1 class="header-text">Current Games</h1>
-</div>
+<!-- <div class="background-yellow">
+  <h1 id="games-title">CURRENT GAMES</h1>
+</div> -->
+
 <div id="games">
   <div *ngFor="let game of games">
     <app-game name="{{game.name}}" imageId="{{game.previewImageId}}" id="{{game.id}}"></app-game>

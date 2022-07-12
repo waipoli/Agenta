@@ -6,16 +6,18 @@
     <button [class.selected]="isButtonSelected('problem')" class="tab-button" routerLink="problem">Problem</button>
     <button [class.selected]="isButtonSelected('submit')" class="tab-button" routerLink="submit">Submit</button>
     <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My
-      submission
-    </button>
-    <button [class.selected]="isButtonSelected('standings')" class="tab-button" routerLink="standings">Standings
-    </button>
+      submissions</button>
+    <ng-container *ngIf="championsLength != 0">
+      <button [class.selected]="isButtonSelected('standings')" class="tab-button"
+        routerLink="standings">Standings</button>
+    </ng-container>
   </div>
   <div class="right-part">
     <img id="danger" src="assets/images/danger.png">
     <span class="text">{{game.name}}{{leftTime}}</span>
     <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
-         routerLink="/account"></div>
-  <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+      routerLink="/account">
+    <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+  </div>
 </div>
 <router-outlet></router-outlet>

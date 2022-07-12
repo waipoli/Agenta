@@ -1,4 +1,6 @@
 <div id="block">
     <span id="number" [ngClass]="{'gold': num === 1, 'silver': num === 2, 'bronze': num === 3}">{{num}}</span>
     <span id="name">{{nickname}}</span>
+    <span id="score">{{score}}</span>
+    <span id="time">{{time?.toFixed(2)}}</span>
 </div>

@@ -1,8 +1,8 @@
 @import "src/main-styles";
 
 .Game {
-  width: 25rem;
-  height: 22rem;
+  width: 15rem;
+  height: 12rem;
   color: $text-color;
   background-color: $block-color2;
   border-radius: 10px;
@@ -22,13 +22,12 @@
   margin-top: 1rem;
   margin-left: 1rem;
   color: black;
-  font-size: 30px;
+  font-size: 1.4rem;
   font-weight: bold;
-  font-family: 'Space Grotesk';
 }
 
 .image {
-  min-width: 25rem;
+  min-width: 100%;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;

@@ -1,12 +1,25 @@
 @import "src/main-styles";
 
 #games {
-  width: 95%;
+  width: 100%;
   display: flex;
   margin: auto;
   // margin-top: 1.5rem;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+  // margin-top: -5rem;
 }
 
+#games-title {
+  color: white;
+  font-size: 2.8rem;
+  text-shadow: 10px 10px 8px rgba(231, 174, 34, 1);
+}
+
+.background-yellow {
+  background: radial-gradient(#FFCF59, #FFCF59, #FFCE54);
+  display: flex;
+  flex-direction: column;
+  height: 17.5rem;
+}

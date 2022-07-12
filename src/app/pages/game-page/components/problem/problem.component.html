@@ -2,8 +2,8 @@
   <h1 class="header-text">{{game.name}} Statement</h1>
 </div>
 
-<div class="container">
+<div id="container">
   <div id="header">{{game.name}} Game</div>
-  <div class="content" [innerHTML]="game.htmlContent | safeHtml">
+  <div id="content" [innerHTML]="game.htmlContent | safeHtml">
   </div>
 </div>

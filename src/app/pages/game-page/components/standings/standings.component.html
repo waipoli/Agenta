@@ -2,16 +2,15 @@
     <h1 class="header-text">CHESS GAME STANDINGS</h1>
 </div>
 
+<div id="header">
+    <h3 class="qwe" id="rank">Rank</h3>
+    <h3 class="qwe" id="name">Name</h3>
+    <h3 class="qwe" id="score">Score</h3>
+    <h3 class="qwe" id="time">Time</h3>
+</div>
+
 <div id="standings">
-    <app-standings-block [nickname]="'ElMishucha'" [num]="1"></app-standings-block>
-    <app-standings-block [nickname]="'Maxim'" [num]="1"></app-standings-block>
-    <app-standings-block [nickname]="'Platowka'" [num]="3"></app-standings-block>
-
-    <div id="line"></div>
-
-    <app-standings-block [nickname]="'Krutoi'" [num]="4"></app-standings-block>
-    <app-standings-block [nickname]="'Bot123'" [num]="5"></app-standings-block>
-    <app-standings-block [nickname]="'PDDf_qwe'" [num]="6"></app-standings-block>
-    <app-standings-block [nickname]="'QWERTY'" [num]="7"></app-standings-block>
-    <app-standings-block [nickname]="'itak_dalee'" [num]="8"></app-standings-block>
+    <ng-container *ngFor="let champion of champions">
+        <app-standings-block [nickname]="champion.name" [num]="champion.id" [score]="champion.score" [time]="champion.time"></app-standings-block>
+    </ng-container>
 </div>

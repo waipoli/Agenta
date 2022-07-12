@@ -15,7 +15,6 @@
 .text {
   margin-right: 3rem;
   display: flex;
-  font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 700;
   font-size: 1.6rem;
@@ -28,7 +27,6 @@
   color: #FF9292;
   width: 2.8rem;
   height: 2.8rem;
-  margin-right: 0.6rem;
   margin-bottom: 0.4rem;
 }
 
@@ -48,10 +46,8 @@
 #logout {
   cursor: pointer;
   transform: scale(2, 2);
-  margin-left: 2rem;
-  margin-right: 2rem;
   color: $text-color;
-
+  margin-right: 1rem;
   &:hover {
     color: $yellow;
     transform: scale(2.1, 2.1);
