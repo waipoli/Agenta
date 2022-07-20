@@ -18,7 +18,7 @@ export class ChampionService {
 
   getChampions(gameId: number): Observable<Champion[]> {
     let auth_token = sessionStorage.getItem('token')
-    return this.http.get<Champion[]>(GlobalConstants.serverUrl + '/game/' + gameId.toString() + 'standings', {
+    return this.http.get<Champion[]>(GlobalConstants.serverUrl + 'games/' + gameId.toString() + '/standings', {
       headers: {
         'Authorization': `Bearer ${auth_token}`
       }

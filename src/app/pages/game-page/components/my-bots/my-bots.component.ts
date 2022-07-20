@@ -19,10 +19,17 @@ export class MyBotsComponent implements OnInit {
 
     let id: number = Number(this._route.url.split('/')[2])
 
+
     this._botService.getBots(id).subscribe((res: Bot[]) => {
       this.Bots = res;
     })
 
+    setInterval(() => {
+        this._botService.getBots(id).subscribe((res: Bot[]) => {
+          this.Bots = res;
+        })
+      },
+      1000)
   }
 
 }

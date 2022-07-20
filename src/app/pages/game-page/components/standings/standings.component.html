@@ -1,5 +1,5 @@
 <div class="header">
-    <h1 class="header-text">CHESS GAME STANDINGS</h1>
+    <h1 class="header-text">{{game.name.toUpperCase()}} GAME STANDINGS</h1>
 </div>
 
 <div id="header">
@@ -11,6 +11,6 @@
 
 <div id="standings">
     <ng-container *ngFor="let champion of champions">
-        <app-standings-block [nickname]="champion.name" [num]="champion.id" [score]="champion.score" [time]="champion.time"></app-standings-block>
+        <app-standings-block [nickname]="champion.name" [num]="champion.rank" [score]="champion.score" [time]="champion.time"></app-standings-block>
     </ng-container>
 </div>

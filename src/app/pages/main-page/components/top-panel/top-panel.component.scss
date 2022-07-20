@@ -33,14 +33,12 @@
 }
 
 #end{
-  margin-right: 2.5rem;
-
+  //margin-right: 2.5rem;
 }
 
 #logout{
   cursor: pointer;
   transform: scale(2,2);
-  margin-left: 2rem;
   color: $text-color;
   &:hover{
     color: $yellow;
@@ -50,34 +48,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-#interact {
-
-  transition: color 0.08s;
-  animation-name: rotating;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 3s;
-}
-
-@keyframes rotating {
-  from {
-    display: flex;
-    transform: rotate(0deg);
-  }
-  to {
-    display: flex;
-    transform: rotate(360deg);
-  }
-}

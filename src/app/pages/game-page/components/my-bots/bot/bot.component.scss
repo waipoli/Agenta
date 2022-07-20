@@ -64,6 +64,13 @@ span {
   animation-duration: 3s;
 }
 
+#tick {
+  margin-left: 5rem;
+}
+#cross {
+  margin-left: 5rem;
+}
+
 @keyframes rotating {
   from {
     display: flex;

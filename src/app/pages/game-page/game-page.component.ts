@@ -77,7 +77,7 @@ export class GamePageComponent implements OnInit {
       H = Math.round(H)
       M = Math.round(M)
       S = Math.round(S)
-
+      console.log(this.game.endDate.getTime())
       this.leftTime = " Game ends in " + D + ':' + (Math.floor(H / 10)).toString() + (H % 10).toString() + ':' + (Math.floor(M / 10)).toString() + (M % 10).toString() + ':' + (Math.floor(S / 10)).toString() + (S % 10).toString();
       if (time < 0) {
         this.leftTime = " Game is over";

@@ -1,4 +1,6 @@
 <div class="top-panel">
+  <div class="content">
+
   <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
   <span class="agenta-title">{{title}}</span>
   <div id="top-panel-buttons">
@@ -18,6 +20,7 @@
     <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
       routerLink="/account">
     <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+  </div>
   </div>
 </div>
 <router-outlet></router-outlet>

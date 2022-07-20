@@ -7,5 +7,12 @@
     <ng-container *ngIf="!isChecked">
       <div id="interact"><img src="assets/images/gear.png"></div>
     </ng-container>
+    <ng-container *ngIf="isValidate && isChecked">
+      <span id="tick"><i class="fa-solid fa-check"></i></span>
+    </ng-container>
+    <ng-container *ngIf="!isValidate && isChecked">
+      <span id="cross"><i class="fa-solid fa-xmark"></i></span>
+    </ng-container>
+
   </div>
 </div>
