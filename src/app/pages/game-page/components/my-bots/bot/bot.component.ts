@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {State} from "../../../../../core/models/bot";
 
 @Component({
   selector: 'app-bot',
@@ -9,8 +10,8 @@ export class BotComponent implements OnInit {
   @Input() name = 'ElMishucha';
   @Input() language = 'C++';
   @Input() date = '3 days ago';
-  @Input() isValidate: boolean = false;
-  @Input() isChecked: boolean = false;
+  @Input() state: State = State.Unverified;
+
 
   constructor() {
   }

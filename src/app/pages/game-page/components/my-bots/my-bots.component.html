@@ -10,8 +10,8 @@
     <span id="date">Date</span>
   </div>
   <ng-container *ngFor="let bot of Bots">
-    <app-bot [name]="bot.name" [language]="bot.language" [isValidate]="bot.isValidate"
-             [isChecked]="bot.isChecked"></app-bot>
+    <app-bot [name]="bot.name" [language]="bot.language" [state]="bot.state"
+          ></app-bot>
   </ng-container>
 </div>
 </body>

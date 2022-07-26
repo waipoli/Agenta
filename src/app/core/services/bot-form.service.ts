@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Bot} from '../models/bot';
+import {Bot, State} from '../models/bot';
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -32,8 +32,7 @@ export class BotFormService {
         gameId: 0,
         name: "",
         language: "",
-        isValidate: false,
-        isChecked: false
+        state: State.Unverified,
       };
     }
     let id: number = Number(this._route.url.split('/')[2])
@@ -42,9 +41,8 @@ export class BotFormService {
       gameId: id,
       userId: JSON.parse(user).id,
       name: this.botForm?.get('name')?.value,
-      language: this.botForm?.get('language')?.value,
-      isChecked: false,
-      isValidate: false
+      language: this.botForm?.get('language')?.value.charAt(0).toUpperCase()+this.botForm?.get('language')?.value.slice(1),
+      state: State.Unverified,
 
     };
 
