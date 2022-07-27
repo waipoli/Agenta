@@ -1,17 +1,25 @@
 <body>
-<div class="Header">
-  <h1 class="header-text">YOUR BOTS</h1>
-</div>
-
-<div id="bots">
-  <div class="tags">
-    <span id="name">Name</span>
-    <span id="lang">Language</span>
-    <span id="date">Date</span>
+  <div id="bots">
+    
+    <div *ngIf="Bots.length != 0">
+      <div class="Header">
+        <h1 class="header-text">YOUR BOTS</h1>
+      </div>
+      <div class="tags">
+        <span id="name">Name</span>
+        <span id="lang">Language</span>
+        <span id="date">Date</span>
+      </div>
+      <ng-container *ngFor="let bot of Bots">
+        <app-bot [name]="bot.name" [language]="bot.language">
+        </app-bot>
+      </ng-container>
+    </div>
+    <div *ngIf="Bots.length == 0">
+      <h1 id="no-bots">You don't have any bots</h1>
+    </div>
   </div>
   <ng-container *ngFor="let bot of Bots">
-    <app-bot [name]="bot.name" [language]="bot.language" [state]="bot.state"
-          ></app-bot>
+    <app-bot [name]="bot.name" [language]="bot.language" [state]="bot.state"></app-bot>
   </ng-container>
-</div>
 </body>
