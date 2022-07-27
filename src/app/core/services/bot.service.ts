@@ -24,7 +24,7 @@ export class BotService {
     formData.append("data", JSON.stringify(this.botFormService.getBotFromForm()));
     formData.append("file", file);
     let auth_token = sessionStorage.getItem('token')
-    return this.http.put<string>(this.botUrl+"/upsert", formData, {
+    return this.http.put<string>(this.botUrl + "/upsert", formData, {
       headers: {
         'Authorization': `Bearer ${auth_token}`
       }
@@ -35,6 +35,15 @@ export class BotService {
     let auth_token = sessionStorage.getItem('token')
     return this.http.get<Bot[]>(this.botUrl + '/' + gameId.toString(), {
       headers: {
+        'Authorization': `Bearer ${auth_token}`
+      }
+    });
+  }
+
+  deleteBot(id: number): Observable<Object> {
+    let auth_token = sessionStorage.getItem('token')
+    return  this.http.delete(this.botUrl+'/' + id.toString(),{
+      headers:{
         'Authorization': `Bearer ${auth_token}`
       }
     });

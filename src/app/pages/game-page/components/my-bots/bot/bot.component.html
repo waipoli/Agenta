@@ -3,7 +3,7 @@
   <span id="lang">{{language}}</span>
   <span id="date">{{date}}</span>
   <div class="edit-buttons">
-    <span id="delete"><i class="fa-solid fa-trash-can"></i></span>
+    <span id="delete" (click)="delete()"><i class="fa-solid fa-trash-can"></i></span>
     <ng-container *ngIf="state != 1 && state != -1">
       <div id="interact"><img src="assets/images/gear.png"></div>
     </ng-container>
