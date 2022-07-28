@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Bot} from "../../../../core/models/bot";
 import {BotService} from "../../../../core/services/bot.service";
-import {Game} from "../../../../core/models/game";
 import {Router} from "@angular/router";
 
 @Component({

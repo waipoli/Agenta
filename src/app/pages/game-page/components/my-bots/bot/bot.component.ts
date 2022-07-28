@@ -21,7 +21,6 @@ export class BotComponent implements OnInit {
   }
 
   delete() {
-    console.log(1234)
     if (this.id != null)
       this._botService.deleteBot(this.id).subscribe(req => {
         console.log(req)
