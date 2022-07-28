@@ -48,6 +48,16 @@ export class SubmitComponent implements OnInit {
     if (this.file == null) {
       return;
     }
+    let url = this._route.url.split('/');
+    url.pop();
+    let url_str = "";
+    url.forEach(element => {
+      url_str += element + '/';
+    });
+
+    url_str += 'my-submission'
+
+    this._route.navigate([url_str]);
     this.botService.upsertBot(this.file).subscribe();
   }
 }

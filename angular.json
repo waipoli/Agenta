@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "Agenta"
+  "defaultProject": "Agenta",
+  "cli": {
+    "analytics": "ec9a6927-3ed9-4f1e-a732-02ada0a052c9"
+  }
 }
