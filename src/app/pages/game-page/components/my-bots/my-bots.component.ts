@@ -24,9 +24,15 @@ export class MyBotsComponent implements OnInit {
     })
 
     setInterval(() => {
+        let b: Bot[] = new Array<Bot>();
         this._botService.getBots(id).subscribe((res: Bot[]) => {
-          this.Bots = res;
+          b = res;
+
+          if (JSON.stringify(res) != JSON.stringify(this.Bots)) {
+            this.Bots = res;
+          }
         })
+
       },
       1000)
   }

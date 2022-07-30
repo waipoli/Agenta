@@ -10,13 +10,13 @@
     <div *ngIf="user.id != -1" class="right-part">
       <span id="username">{{user.username}}</span>
       <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
-        routerLink="account">
+           routerLink="account">
       <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
     </div>
     <div *ngIf="user.id == -1" class="right-part">
-      <a class="tab-button" href="http://localhost:4200/register">Register</a>
+      <a class="tab-button" routerLink="register">Register</a>
       <span id="or">or</span>
-      <a class="tab-button" href="http://localhost:4200/login">Login</a>
+      <a class="tab-button" routerLink="login">Login</a>
     </div>
     <div>
 
