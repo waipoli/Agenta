@@ -2,8 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {BotFormService} from 'src/app/core/services/bot-form.service';
 import {BotService} from 'src/app/core/services/bot.service';
-import {tap} from 'rxjs';
-import {Game} from "../../../../core/models/game";
+import {Game, StateGame} from "../../../../core/models/game";
 import {Router} from "@angular/router";
 import {GamesService} from "../../../../core/services/games.service";
 
@@ -24,7 +23,8 @@ export class SubmitComponent implements OnInit {
     htmlContent: "",
     id: 0,
     name: "",
-    previewImageId: 0
+    previewImageId: 0,
+    state:StateGame.Hidden
   }
 
   constructor(private botFormService: BotFormService, private botService: BotService, private _route: Router, private gameService: GamesService) {

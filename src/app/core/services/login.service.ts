@@ -4,6 +4,7 @@ import {GlobalConstants} from "../../global-constants";
 import {Observable, shareReplay, tap} from "rxjs";
 import {UserLogin} from "../models/userLogin";
 import {Response} from "../models/Response";
+import {sha512} from 'sha512-crypt-ts';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class LoginService {
   }
 
   login(user: UserLogin): Observable<HttpResponse<Response>> {
+    user.password = sha512.crypt(user.password, GlobalConstants.salt)
     return this.http.post<Response>(this.loginUrl, user, {observe: "response"});
   }
 

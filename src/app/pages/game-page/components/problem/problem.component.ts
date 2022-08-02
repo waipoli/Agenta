@@ -1,10 +1,9 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, Pipe, PipeTransform, ViewEncapsulation} from '@angular/core';
 
 import {DomSanitizer} from '@angular/platform-browser';
-import {PipeTransform, Pipe} from '@angular/core';
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Router} from "@angular/router";
 import {GamesService} from "../../../../core/services/games.service";
-import {Game} from "../../../../core/models/game";
+import {Game, StateGame} from "../../../../core/models/game";
 
 @Pipe({name: 'safeHtml'})
 export class SafeHtmlPipe implements PipeTransform {
@@ -28,7 +27,8 @@ export class ProblemComponent implements OnInit {
     htmlContent: "",
     id: 0,
     name: "",
-    previewImageId: 0
+    previewImageId: 0,
+    state:StateGame.Hidden
   }
 
   id: string = "";

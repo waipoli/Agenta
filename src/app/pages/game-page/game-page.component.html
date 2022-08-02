@@ -1,26 +1,35 @@
 <div class="top-panel">
   <div class="content">
 
-  <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
-  <span class="agenta-title">{{title}}</span>
-  <div id="top-panel-buttons">
-    <button class="tab-button" routerLink="/games"><i class='fas fa-angle-left'></i></button>
-    <button [class.selected]="isButtonSelected('problem')" class="tab-button" routerLink="problem">Problem</button>
-    <button [class.selected]="isButtonSelected('submit')" class="tab-button" routerLink="submit">Submit</button>
-    <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My
-      submissions</button>
-    <ng-container *ngIf="championsLength != 0">
-      <button [class.selected]="isButtonSelected('standings')" class="tab-button"
-        routerLink="standings">Standings</button>
-    </ng-container>
-  </div>
-  <div class="right-part">
-    <img id="danger" src="assets/images/danger.png">
-    <span class="text">{{game.name}}{{leftTime}}</span>
-    <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
-      routerLink="/account">
-    <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
-  </div>
+    <img id="title-icon" src="../../../favicon.ico" alt="Agenta">
+    <span class="agenta-title">{{title}}</span>
+    <div id="top-panel-buttons">
+      <button class="tab-button" routerLink="/games"><i class='fas fa-angle-left'></i></button>
+      <button [class.selected]="isButtonSelected('problem')" class="tab-button" routerLink="problem">Problem</button>
+      <ng-container *ngIf="game.state == 1">
+        <button [class.selected]="isButtonSelected('submit')" class="tab-button" routerLink="submit">Submit</button>
+
+      </ng-container>
+      <ng-container *ngIf="game.state != 0">
+
+        <button [class.selected]="isButtonSelected('my-submission')" class="tab-button" routerLink="my-submission">My
+          submissions
+        </button>
+      </ng-container>
+
+      <ng-container *ngIf="championsLength != 0">
+        <button [class.selected]="isButtonSelected('standings')" class="tab-button"
+                routerLink="standings">Standings
+        </button>
+      </ng-container>
+    </div>
+    <div class="right-part">
+      <img id="danger" src="assets/images/danger.png">
+      <span class="text">{{game.name}}{{leftTime}}</span>
+      <img class="account" src="assets/images/account.svg" [class.selected]="isButtonSelected('account')"
+           routerLink="/account">
+      <span id="logout" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+    </div>
   </div>
 </div>
 <router-outlet></router-outlet>

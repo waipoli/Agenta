@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import {Champion} from 'src/app/core/models/champion';
 import {ChampionService} from 'src/app/core/services/champion.service';
 import {GamesService} from "../../../../core/services/games.service";
-import {Game} from "../../../../core/models/game";
+import {Game, StateGame} from "../../../../core/models/game";
 import {BotService} from "../../../../core/services/bot.service";
 
 @Component({
@@ -18,7 +18,8 @@ export class StandingsComponent implements OnInit {
     htmlContent: "",
     id: 0,
     name: "",
-    previewImageId: 0
+    previewImageId: 0,
+    state:StateGame.Hidden
   }
   constructor(private championService: ChampionService, private botServices: BotService, private _route: Router, private gameService: GamesService) {
 

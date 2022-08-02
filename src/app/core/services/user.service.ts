@@ -6,6 +6,7 @@ import {GlobalConstants} from "../../global-constants";
 import {Observable} from "rxjs";
 import {UserData} from "../models/userData";
 import {PasswordChange} from "../models/passwordChange";
+import {sha512} from "sha512-crypt-ts";
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,8 @@ export class UserService {
 
 
   updatePassword(passwordChange:PasswordChange):Observable<string>{
+    passwordChange.oldPassword = sha512.crypt(passwordChange.oldPassword, GlobalConstants.salt)
+    passwordChange.newPassword = sha512.crypt(passwordChange.newPassword, GlobalConstants.salt)
     let auth_token = sessionStorage.getItem('token')
     return this.http.patch<string>(this.userUrl+'/password', passwordChange, {
       headers: {

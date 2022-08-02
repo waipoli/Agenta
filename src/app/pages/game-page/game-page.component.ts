@@ -1,10 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {GlobalConstants} from "../../global-constants";
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import {Game} from "../../core/models/game";
+import {Game, StateGame} from "../../core/models/game";
 import {GamesService} from "../../core/services/games.service";
-import { ChampionService } from 'src/app/core/services/champion.service';
-import { Champion } from 'src/app/core/models/champion';
+import {ChampionService} from 'src/app/core/services/champion.service';
+import {Champion} from 'src/app/core/models/champion';
 
 @Component({
   selector: 'app-game-page',
@@ -18,7 +18,8 @@ export class GamePageComponent implements OnInit {
     htmlContent: "",
     id: 0,
     name: "",
-    previewImageId: 0
+    previewImageId: 0,
+    state: StateGame.Hidden
   };
 
   championsLength: number = 0;
@@ -30,6 +31,7 @@ export class GamePageComponent implements OnInit {
   id: string = ""
 
   ngOnInit(): void {
+
     if (sessionStorage.getItem("token") == null) {
       this.router.navigate(["/login"]);
       return;
@@ -49,10 +51,20 @@ export class GamePageComponent implements OnInit {
     })
 
     this.gamesService.getGame(this.id).subscribe((game: Game) => {
+      if(game == null){
+        this.router.navigate(["/games"]);
+        return;
+      }
       this.game = game;
       this.game.endDate = new Date(game.endDate);
       this.updateTime();
-   });
+      console.log(this.game)
+      if(this.game.state == StateGame.Hidden){
+        this.router.navigate(["/games"]);
+        return;
+      }
+
+    });
     this.updateTime();
 
     setInterval(() => {

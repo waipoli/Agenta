@@ -7,6 +7,7 @@
     "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "start-dev": "ng serve -o",
     "test": "ng test"
   },
   "engines": {
@@ -30,9 +31,12 @@
     "@tinymce/tinymce-angular": "^6.0.1",
     "bulma": "^0.9.3",
     "express": "^4.18.1",
+    "fast-sha256": "^1.3.0",
     "path": "^0.12.7",
     "rxjs": "~7.5.0",
+    "sha512-crypt-ts": "^0.1.27",
     "tinymce": "^6.0.3",
+    "ts-md5": "^1.2.11",
     "tslib": "^2.3.0",
     "typescript": "~4.6.2",
     "zone.js": "~0.11.4"
